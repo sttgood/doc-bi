@@ -24,6 +24,14 @@ export default hopeTheme({
   //纯净模式
   pure: false,
 
+  // darkmode:"enable",
+  /*   
+  "switch": 在深色模式，浅色模式和自动之间切换 (默认)
+  "toggle": 在深色模式和浅色模式之间切换
+  "auto": 自动根据用户设备主题或当前时间决定是否应用深色模式
+  "enable": 强制深色模式
+  "disable": 禁用深色模式 */
+
   locales: {
       /**
      * Chinese locale config

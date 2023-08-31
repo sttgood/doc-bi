@@ -3,12 +3,12 @@ home: true
 icon: home
 title: 项目主页
 heroImage: /logo2.png
-bgImage: https://theme-hope-assets.vuejs.press/bg/6-light.svg
-bgImageDark: https://theme-hope-assets.vuejs.press/bg/6-dark.svg
+# bgImage: https://theme-hope-assets.vuejs.press/bg/6-light.svg
+# bgImageDark: https://theme-hope-assets.vuejs.press/bg/6-dark.svg
 bgImageStyle:
   background-attachment: fixed
-heroText: 项目名称
-tagline: 你可以在这里放置或是整个项目的描述。
+heroText: SttDoc
+tagline: 知识记录和随心笔记。
 actions:
   - text: 权威官方网站
     link: ./web/official-web
