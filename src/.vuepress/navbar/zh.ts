@@ -66,7 +66,54 @@ export const zhNavbar = navbar([
     ],
   },
   //------------------------------链接---------------------------------------
-
+  {
+    text:"官网",
+    icon:"guanwang",
+    children: [
+      {
+        text:"FE",
+        icon:"",
+        children:[
+          {
+            text:"MDN",
+            link:"https://developer.mozilla.org/zh-CN/",
+          },
+          {
+            text:"插件2",
+            link:"",
+          }
+        ],
+      },
+      {
+        text:"BE",
+        icon:"",
+        children:[
+          {
+            text:"插件1",
+            link:"",
+          },
+          {
+            text:"插件2",
+            link:"",
+          }
+        ],
+      },
+      {
+        text:"OTHER",
+        icon:"",
+        children:[
+          {
+            text:"插件1",
+            link:"",
+          },
+          {
+            text:"插件2",
+            link:"",
+          }
+        ],
+      },
+    ],
+  },
   {
     text: "Vue",
     icon: "Vue",
@@ -85,38 +132,4 @@ export const zhNavbar = navbar([
       },
     ],
   },
-  {
-    text:"插件",
-    icon:"chajian1",
-    children: [
-      {
-        text:"美化插件",
-        icon:"",
-        children:[
-          {
-            text:"插件1",
-            link:"",
-          },
-          {
-            text:"插件2",
-            link:"",
-          }
-        ],
-      },
-      {
-        text:"功能插件",
-        icon:"",
-        children:[
-          {
-            text:"插件1",
-            link:"",
-          },
-          {
-            text:"插件2",
-            link:"",
-          }
-        ],
-      },
-    ],
-  }
 ]);

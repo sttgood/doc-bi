@@ -11,17 +11,18 @@
     "update-package": "pnpm dlx vp-update"
   },
   "devDependencies": {
-    "@vuepress/client": "2.0.0-beta.66",
-    "@vuepress/plugin-shiki": "2.0.0-beta.66",
+    "@vuepress/client": "2.0.0-beta.67",
+    "@vuepress/plugin-shiki": "2.0.0-beta.67",
     "unplugin-auto-import": "^0.16.6",
-    "unplugin-vue-components": "^0.25.1",
+    "unplugin-vue-components": "^0.25.2",
     "vue": "^3.3.4",
-    "vuepress": "2.0.0-beta.66",
-    "vuepress-theme-hope": "2.0.0-beta.235"
+    "vuepress": "2.0.0-beta.67",
+    "vuepress-theme-hope": "2.0.0-beta.237"
   },
   "dependencies": {
     "@jridgewell/sourcemap-codec": "^1.4.15",
     "@rollup/plugin-terser": "^0.4.3",
-    "element-plus": "^2.3.9"
+    "artplayer": "^5.0.9",
+    "element-plus": "^2.3.12"
   }
 }

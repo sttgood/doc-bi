@@ -11,7 +11,7 @@ export default hopeTheme({
   },
   
 
-  iconAssets: "//at.alicdn.com/t/c/font_4213402_w98i9i3lbdr.css",
+  iconAssets: "//at.alicdn.com/t/c/font_4213402_oteptqh3p5.css",
 
   logo: "/assets/image/stt-black.png",
 
@@ -82,6 +82,7 @@ export default hopeTheme({
     sidebarDisplay: "none"
   },
   plugins: {
+    
     //关闭prismjs高亮器。使用shiki@next(更多支持，更慢)
     prismjs: false,
   
@@ -141,7 +142,24 @@ export default hopeTheme({
       vPre: true,
       vuePlayground: true,
     },
-
+    components:{
+      components:[
+        //组件：播放器，PDF 代码等。
+        "ArtPlayer",
+        "AudioPlayer",
+        "BiliBili",
+        "CodePen",
+        "PDF",
+        "Replit",
+        "Share",
+        "SiteInfo",
+        "StackBlitz",
+        // "VidStack",
+        "VideoPlayer",
+        "XiGua",
+        "YouTube",
+      ]
+    },
     // uncomment these if you want a pwa
     // pwa: {
     //   favicon: "/favicon.ico",

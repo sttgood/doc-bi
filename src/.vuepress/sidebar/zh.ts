@@ -8,6 +8,41 @@ activeMatch: 项目激活匹配 (可选)，支持正则字符串。
 */
 
 export const zhSidebar = sidebar({
+  "/heart/":[
+    {
+      text: "视频收藏",
+      prefix: "video/",
+      collapsible: true,
+      children: [
+        {
+          text: "罗翔语录",
+          link: "heart.md",
+
+        },
+        {
+          text: "...",
+          link: "less/",
+        },
+      ]
+    },
+    {
+      text: "随笔语录",
+      prefix: "text/",
+      collapsible: true,
+      children: [
+        {
+          text: "日常随笔",
+          link: "heart.md",
+
+        },
+        {
+          text: "...",
+          link: "less/",
+        },
+      ]
+    }
+  
+  ],
   "/fe/": [
     {
       text: "预处理语言",

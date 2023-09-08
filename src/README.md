@@ -20,6 +20,9 @@ actions:
   - text: 其他分类
     link: /article/
 
+  - text: 心灵一角
+    link: ./heart/
+
 highlights:
   - header: 你好！
     image: /assets/image/binary.svg
