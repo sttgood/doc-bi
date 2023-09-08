@@ -1,0 +1,1 @@
+import{_ as e,o as t,c,d as n}from"./app-92e64920.js";const o={},_=n("p",null,"一切理论都是实践的基础，一切理论都以实践为目的。理论不能脱离实践",-1),s=[_];function r(a,l){return t(),c("div",null,s)}const i=e(o,[["render",r],["__file","index.html.vue"]]);export{i as default};
