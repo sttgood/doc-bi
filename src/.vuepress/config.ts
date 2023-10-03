@@ -12,7 +12,7 @@ export default defineUserConfig({
   alias: {
     "@MyComponent": path.resolve(__dirname, "components/MyComponent.vue"),
   },
-  base: "/SttDoc/",
+  base: "/",
   locales: {
     "/": {
       lang: "zh-CN",

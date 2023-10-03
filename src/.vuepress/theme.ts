@@ -9,8 +9,8 @@ export default hopeTheme({
     name: "",
     url: "",
   },
-  
 
+  //图标相关
   iconAssets: "//at.alicdn.com/t/c/font_4213402_oteptqh3p5.css",
 
   logo: "/assets/image/stt-black.png",
@@ -18,6 +18,9 @@ export default hopeTheme({
   repo: "vuepress-theme-hope/vuepress-theme-hope",
 
   docsDir: "src",
+
+
+  
   
   //全屏开关
   fullscreen: true,
@@ -66,16 +69,13 @@ export default hopeTheme({
       metaLocales: {
         editLink: "Edit this page on GitHub",
       },
-    },
-
-  
-    
+    },  
   },
 
+  //加密功能
   encrypt: {
     config: {
-      "/demo/encrypt.html": ["1234"],
-      "/zh/demo/encrypt.html": ["1234"],
+      "/heart/": ["776599148"]
     },
   },
   blog:{
