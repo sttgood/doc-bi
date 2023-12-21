@@ -31,6 +31,7 @@ export const zhNavbar = navbar([
           { text: "JavaScript", icon: "javascript", link: "js/" },
           { text: "HTML", icon: "html", link: "html.md" },
           { text: "CSS", icon: "css", link: "css.md" },
+        
         ],
       },
     ],

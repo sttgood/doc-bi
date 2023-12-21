@@ -2,6 +2,8 @@ import { shikiPlugin } from "@vuepress/plugin-shiki";
 import { defineUserConfig } from "vuepress";
 import path from 'path'
 import theme from "./theme.js";
+import { mdEnhance } from "vuepress-theme-hope";
+
 
 export default defineUserConfig({
   markdown:{
@@ -32,7 +34,6 @@ export default defineUserConfig({
       theme: "one-dark-pro",
     }),
   ],
-
   theme,
 
   // Enable it with pwa

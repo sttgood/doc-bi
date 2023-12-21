@@ -43,6 +43,41 @@ export const zhSidebar = sidebar({
     }
   
   ],
+  "/problem/":[
+    {
+      text: "专业问题",
+      prefix: "pro/",
+      collapsible: true,
+      children: [
+        {
+          text: "专业问题",
+          link: "heart.md",
+
+        },
+        {
+          text: "其他",
+          link: "/",
+        },
+      ]
+    },
+    {
+      text: "随笔语录",
+      prefix: "daily/",
+      collapsible: true,
+      children: [
+        {
+          text: "日常随笔",
+          link: "heart.md",
+
+        },
+        {
+          text: "其他",
+          link: "/",
+        },
+      ]
+    }
+  
+  ],
   "/fe/": [
     {
       text: "预处理语言",

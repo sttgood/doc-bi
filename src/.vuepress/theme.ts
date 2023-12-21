@@ -90,7 +90,6 @@ export default hopeTheme({
     //    light: "ateliersulphurpool-light" | "coldark-cold" | "coy" | "duotone-light" | "ghcolors" | "gruvbox-light" | "material-light" | "one-light" | "vs";
     //    dark: "atom-dark" | "cb" | "coldark-dark" | "dark" | "dracula" | "duotone-dark" | "duotone-earth" | "duotone-forest" | "duotone-sea" | "duotone-space" | "gruvbox-dark" | "holi" | "hopscotch" | "lucario" | "material-dark" | "material-oceanic" | "night-owl" | "nord" | "one-dark" | "pojoaque" | "shades-of-purple" | "solarized-dark-atom" | "tomorrow" | "vsc-dark-plus" | "xonokai" | "z-touch";
     //prismjs: {light:"dracula",dark:'one-dark'},
-
     blog: true,
     // You should generate and use your own comment service
     comment: {
@@ -103,6 +102,7 @@ export default hopeTheme({
     
     // All features are enabled for demo, only preserve features you need here
     mdEnhance: {
+
       align: true,
       attrs: true,
       chart: true,

@@ -103,3 +103,21 @@
 **2.专一** ：是目的
 
 <img src="../../.vuepress/public/assets/image/%E4%B8%93%E4%B8%80.png" alt="Alt text" style="zoom:50%;" />
+
+## 2023年12月21日14:29:58--压力和焦虑
+
+**主要目的：保证生活学习工作等事情在压力和焦虑可以继续进行。**
+
+物理：
+
+​	睡觉:sleeping:
+
+​	生活规律:sun_with_face:
+
+​	运动:walking:
+
+精神：
+
+​	宣泄:fire:
+
+​	沟通:family:
