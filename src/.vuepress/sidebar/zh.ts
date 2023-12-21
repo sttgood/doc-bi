@@ -50,7 +50,7 @@ export const zhSidebar = sidebar({
       collapsible: true,
       children: [
         {
-          text: "专业问题",
+          text: "问题",
           link: "heart.md",
 
         },
@@ -61,12 +61,12 @@ export const zhSidebar = sidebar({
       ]
     },
     {
-      text: "随笔语录",
+      text: "其他问题",
       prefix: "daily/",
       collapsible: true,
       children: [
         {
-          text: "日常随笔",
+          text: "问题",
           link: "heart.md",
 
         },

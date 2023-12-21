@@ -110,14 +110,14 @@
 
 物理：
 
-​	睡觉:sleeping:
+​ 睡觉:sleeping:
 
-​	生活规律:sun_with_face:
+​ 生活规律:sun_with_face:
 
-​	运动:walking:
+​ 运动:walking:
 
 精神：
 
-​	宣泄:fire:
+​ 宣泄:fire:
 
-​	沟通:family:
+​ 沟通:family:
