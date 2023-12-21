@@ -43,4 +43,4 @@ const option = {
 
 :::
 
-<PDF url="/assets/pdf/cpp-c-language-msvc-170.pdf" />
+<!-- <PDF url="/assets/pdf/cpp-c-language-msvc-170.pdf" /> -->
