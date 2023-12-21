@@ -40,39 +40,36 @@ export const zhSidebar = sidebar({
           link: "less/",
         },
       ]
-    }
-  
-  ],
-  "/problem/":[
+    },
     {
-      text: "专业问题",
-      prefix: "pro/",
+      text: "日常问题",
+      prefix: "daily_problem/",
       collapsible: true,
       children: [
         {
-          text: "问题",
-          link: "heart.md",
+          text: "日常问题记录",
+          link: "solve.md",
 
         },
         {
-          text: "其他",
-          link: "/",
+          text: "...",
+          link: "less/",
         },
       ]
     },
     {
-      text: "其他问题",
-      prefix: "daily/",
+      text: "专业问题",
+      prefix: "profess_problem/",
       collapsible: true,
       children: [
         {
-          text: "问题",
-          link: "heart.md",
+          text: "专业问题记录",
+          link: "program.md",
 
         },
         {
-          text: "其他",
-          link: "/",
+          text: "...",
+          link: "less/",
         },
       ]
     }

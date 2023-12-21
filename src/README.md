@@ -20,7 +20,7 @@ actions:
   - text: 其他分类
     link: /article/
 
-  - text: 心灵一角
+  - text: 心灵记录
     link: ./heart/
 
 highlights:
