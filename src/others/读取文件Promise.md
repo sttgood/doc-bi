@@ -4,10 +4,12 @@ category:
   - Promise
   - 异步
 ---
+Promise案例：读取文件
+<!-- more -->
 
--   class.txt 保存  ./name.txt
--   name.txt  保存  ./scroe.txt
--   score.txt 保存  99.9 
+- class.txt 保存  ./name.txt
+- name.txt  保存  ./scroe.txt
+- score.txt 保存  99.9
 
 1.普通读取文件
 
@@ -39,4 +41,3 @@ readFile('./class.txt')
   .then(res=>readFile(res))//得到分数
   .then(res=>console.log(res))
 ```
-

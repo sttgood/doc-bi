@@ -1,6 +1,9 @@
+---
+article: false
+---
 **要素：**
 
-- :model 
+- :model
 - :rules
 - prop
 - v-model
@@ -115,4 +118,3 @@ const isRegister = ref(true)
 </style>
 
 ```
-

@@ -11,11 +11,12 @@ heroText: SttDoc
 tagline: 知识记录和随心笔记。
 actions:
   - text: 权威官方网站
-    link: ./web/official-web
+    link: ./website/official-web
     type: primary
 
   - text: 优秀个人网站
-    link: ./web/personal-web
+    link: ./website/personal-web
+    type: primary
   
   - text: 其他分类
     link: /article/

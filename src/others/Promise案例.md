@@ -3,9 +3,12 @@ title: Promise案例
 category: 
   - Promise
   - 异步
+date: 2023-9-31 9:58:00
+article: true
+timeline: true
 ---
-
-Promis案例：
+Promis案例：异步嵌套
+<!-- more -->
 
 ### 案例1
 
@@ -60,7 +63,7 @@ console.log('hi')
 // 2
 ```
 
-### 案例3：
+### 案例3
 
 要点：promise嵌套状态依赖
 
@@ -79,4 +82,3 @@ const p2=new Promise((resolve,reject)=>{
 p2.then(res=>console.log(res))
   .catch(err=>console.log(err))//err
 ```
-
