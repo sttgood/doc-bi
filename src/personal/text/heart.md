@@ -114,14 +114,11 @@ article: false
 
 物理：
 
-​ 睡觉:sleeping:
-
-​ 生活规律:sun_with_face:
-
-​ 运动:walking:
+> 睡觉:sleeping:
+> 生活规律:sun_with_face:
+> 运动:walking:
 
 精神：
 
-​ 宣泄:fire:
-
-​ 沟通:family:
+> 宣泄:fire:`
+> 沟通:family:

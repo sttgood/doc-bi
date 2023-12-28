@@ -1,14 +1,7 @@
 import { tr } from "element-plus/es/locale";
 import { sidebar } from "vuepress-theme-hope";
-/* 
-text: 项目文字
-link 项目链接
-icon: 项目图标 (可选)
-activeMatch: 项目激活匹配 (可选)，支持正则字符串。
-*/
-
 export const zhSidebar = sidebar({
-  "/heart/":[
+  "/personal/":[
     {
       text: "视频收藏",
       prefix: "video/",
@@ -72,7 +65,23 @@ export const zhSidebar = sidebar({
           link: "less/",
         },
       ]
-    }
+    },
+    {
+      text: "个人计划",
+      prefix: "schedule/",
+      collapsible: true,
+      children: [
+        {
+          text: "日常计划",
+          link: "daily_schedule.md",
+
+        },
+        {
+          text: "...",
+          link: "less/",
+        },
+      ]
+    },
   
   ],
   "/fe/": [

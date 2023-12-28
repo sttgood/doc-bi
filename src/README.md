@@ -22,7 +22,7 @@ actions:
     link: /article/
 
   - text: 心灵记录
-    link: ./heart/
+    link: ./personal/
 
 highlights:
   - header: 
