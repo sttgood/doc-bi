@@ -2,7 +2,6 @@ import { shikiPlugin } from "@vuepress/plugin-shiki";
 import { defineUserConfig } from "vuepress";
 import path from 'path'
 import theme from "./theme.js";
-import { mdEnhance } from "vuepress-theme-hope";
 
 
 export default defineUserConfig({
@@ -27,12 +26,11 @@ export default defineUserConfig({
       description: "A docs demo for vuepress-theme-hope",
     },
   },
-  ///shiki高亮器。开启需要config.js 中plugins.prismjs: false
+  
   plugins: [
-    shikiPlugin({
-      // 你的选项
+     shikiPlugin({
       theme: "one-dark-pro",
-    }),
+    }), 
   ],
   theme,
 

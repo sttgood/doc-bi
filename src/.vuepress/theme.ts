@@ -10,30 +10,18 @@ export default hopeTheme({
     url: "",
   },
 
-  //图标相关
   iconAssets: "//at.alicdn.com/t/c/font_4213402_oteptqh3p5.css",
 
   logo: "/assets/image/stt-black.png",
 
-  repo: "vuepress-theme-hope/vuepress-theme-hope",
+  // repo: "vuepress-theme-hope/vuepress-theme-hope",
 
   docsDir: "src",
-
-
-  
   
   //全屏开关
   fullscreen: true,
   //纯净模式
   pure: false,
-
-  // darkmode:"enable",
-  /*   
-  "switch": 在深色模式，浅色模式和自动之间切换 (默认)
-  "toggle": 在深色模式和浅色模式之间切换
-  "auto": 自动根据用户设备主题或当前时间决定是否应用深色模式
-  "enable": 强制深色模式
-  "disable": 禁用深色模式 */
 
   locales: {
       /**
@@ -75,7 +63,7 @@ export default hopeTheme({
   //加密功能
   encrypt: {
     config: {
-      "/heart/": ["776599148"]
+      "/personal/": ["776599148"]
     },
   },
   blog:{
@@ -86,10 +74,6 @@ export default hopeTheme({
     //关闭prismjs高亮器。使用shiki@next(更多支持，更慢)
     prismjs: false,
   
-    // prismjs: 支持的主题：
-    //    light: "ateliersulphurpool-light" | "coldark-cold" | "coy" | "duotone-light" | "ghcolors" | "gruvbox-light" | "material-light" | "one-light" | "vs";
-    //    dark: "atom-dark" | "cb" | "coldark-dark" | "dark" | "dracula" | "duotone-dark" | "duotone-earth" | "duotone-forest" | "duotone-sea" | "duotone-space" | "gruvbox-dark" | "holi" | "hopscotch" | "lucario" | "material-dark" | "material-oceanic" | "night-owl" | "nord" | "one-dark" | "pojoaque" | "shades-of-purple" | "solarized-dark-atom" | "tomorrow" | "vsc-dark-plus" | "xonokai" | "z-touch";
-    //prismjs: {light:"dracula",dark:'one-dark'},
     blog: true,
     // You should generate and use your own comment service
     comment: {
@@ -99,30 +83,37 @@ export default hopeTheme({
       category: "Announcements",
       categoryId: "DIC_kwDOG_Pt2M4COD69",
     },
-    
-    // All features are enabled for demo, only preserve features you need here
+    //插件提供
+    components:{
+      components:[
+        //组件：播放器，PDF 代码等。
+        "ArtPlayer",
+        "BiliBili",
+        "CodePen",
+        "PDF",
+        "Replit",
+        "Share",
+        "SiteInfo",
+        "StackBlitz",
+        "VidStack",   
+        "XiGua",
+        "VPCard",
+        "Badge"
+      ]
+    },
+    //插件开关
     mdEnhance: {
-
       align: true,
       attrs: true,
-      chart: true,
       codetabs: true,
+      component: true,
       demo: true,
-      echarts: true,
       figure: true,
-      flowchart: true,
-      gfm: true,
       imgLazyload: true,
       imgSize: true,
       include: true,
-      katex: true,
-      mark: true,
-      mermaid: true,
-      card: true,
-      playground: {
-        presets: ["ts", "vue"],
-      },
-      presentation: ["highlight", "math", "search", "notes", "zoom"],
+      mark: true, 
+      flowchart: true,
       stylize: [
         {
           matcher: "Recommended",
@@ -140,27 +131,46 @@ export default hopeTheme({
       sup: true,
       tabs: true,
       vPre: true,
-      vuePlayground: true,
+
+      // install chart.js before enabling it
+      // chart: true,
+
+      // insert component easily
+
+      // install echarts before enabling it
+      // echarts: true,
+
+      // install flowchart.ts before enabling it
+      // flowchart: true,
+
+      // gfm requires mathjax-full to provide tex support
+      // gfm: true,
+
+      // install katex before enabling it
+      // katex: true,
+
+      // install mathjax-full before enabling it
+      // mathjax: true,
+
+      // install mermaid before enabling it
+      // mermaid: true,
+
+      // playground: {
+      //   presets: ["ts", "vue"],
+      // },
+
+      // install reveal.js before enabling it
+      // revealJs: {
+      //   plugins: ["highlight", "math", "search", "notes", "zoom"],
+      // },
+
+      // install @vue/repl before enabling it
+      // vuePlayground: true,
+
+      // install sandpack-vue3 before enabling it
+      // sandpack: true,
     },
-    components:{
-      components:[
-        //组件：播放器，PDF 代码等。
-        "ArtPlayer",
-        "AudioPlayer",
-        "BiliBili",
-        "CodePen",
-        "PDF",
-        "Replit",
-        "Share",
-        "SiteInfo",
-        "StackBlitz",
-        // "VidStack",
-        "VideoPlayer",
-        "XiGua",
-        "YouTube",
-      ]
-    },
-    // uncomment these if you want a pwa
+    // install vuepress-plugin-pwa2 and uncomment these if you want a PWA
     // pwa: {
     //   favicon: "/favicon.ico",
     //   cacheHTML: true,

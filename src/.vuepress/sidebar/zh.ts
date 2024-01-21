@@ -28,6 +28,11 @@ export const zhSidebar = sidebar({
           link: "heart.md",
 
         },
+     
+        {
+          text: "实用感受",
+          link: "practical.md",
+        },
         {
           text: "...",
           link: "less/",

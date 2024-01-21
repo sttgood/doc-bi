@@ -3,7 +3,7 @@ home: true
 icon: home
 title: 项目主页
 heroImage: /logo2.png
-# bgImage: https://theme-hope-assets.vuejs.press/bg/6-light.svg
+bgImage:  /assets/image/light-bg.jpg
 # bgImageDark: https://theme-hope-assets.vuejs.press/bg/6-dark.svg
 bgImageStyle:
   background-attachment: fixed
@@ -242,14 +242,16 @@ highlights:
   - header: 心灵成长的道路
     description: 点点滴滴，指引向前
     #image: /assets/image/advanced.svg
-    bgImage: /assets/image/BlueBG.jpg
+    bgImage: /assets/image/light-bg.jpg
     bgImageDark: https://theme-hope-assets.vuejs.press/bg/4-dark.svg
     highlights:
+      - title: 人生的每一个时刻，过去了，几不会再有了。
+        details:  ---
 
       - title: 做你认为正确的事情。听不懂内心对自己的抱怨。多年之后能够看得起现在的你。
         details:  ---
 
-      - title: 无论如何，你本身就是一个顶天立地的人。
+      - title: 无论如何，你都是一个顶天立地的人。
         details:  ---
        
       - title: 整整的勇敢，在诸多诱惑和诸多欲望的环境对所持有信念的坚持。
