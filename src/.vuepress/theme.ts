@@ -2,64 +2,43 @@ import { hopeTheme } from "vuepress-theme-hope";
 import { enNavbar, zhNavbar } from "./navbar/index.js";
 import { enSidebar, zhSidebar } from "./sidebar/index.js";
 
-export default hopeTheme({
-  hostname: "https://vuepress-theme-hope-docs-demo.netlify.app",
-
+export default hopeTheme(
+  {
+  hostname: "the githuppages",
   author: {
-    name: "",
+    name: "stt",
     url: "",
+    email: "776599148@qq.com"
   },
-
-  iconAssets: "//at.alicdn.com/t/c/font_4213402_oteptqh3p5.css",
-
-  logo: "/assets/image/stt-black.png",
-
-  // repo: "vuepress-theme-hope/vuepress-theme-hope",
-
-  docsDir: "src",
   
-  //全屏开关
-  fullscreen: true,
-  //纯净模式
-  pure: false,
-
+  iconAssets: "//at.alicdn.com/t/c/font_4213402_n8d5iolbiio.css",
+  logo: "/assets/image/stt-black.png",
+  //repo: "vuepress-theme-hope/vuepress-theme-hope",
+  docsDir: "src",
   locales: {
-      /**
-     * Chinese locale config
-     */
+    
     "/": {
-      // navbar
       navbar: zhNavbar,
-
-      // sidebar
       sidebar: zhSidebar,
-
       footer: "默认页脚",
-
       displayFooter: true,
-
       // page meta
       metaLocales: {
         editLink: "在 GitHub 上编辑此页",
       },
     },
+
     "/en/": {
-      // navbar
       navbar: enNavbar,
-
-      // sidebar
       sidebar: enSidebar,
-
       footer: "Default footer",
-
       displayFooter: true,
-
       metaLocales: {
         editLink: "Edit this page on GitHub",
       },
     },  
   },
-
+  hotReload: true,
   //加密功能
   encrypt: {
     config: {
@@ -70,10 +49,31 @@ export default hopeTheme({
     sidebarDisplay: "none"
   },
   plugins: {
-    
-    //关闭prismjs高亮器。使用shiki@next(更多支持，更慢)
-    prismjs: false,
-  
+    shiki:{
+      themes: { 
+        light: 'min-light',
+        dark: 'nord',
+      }    
+    },
+    markdownTab: {
+      tabs: true,
+    },
+    //网站通知----------------------------------------------
+    notice: [
+      {
+        path: "/",
+        title: "通知",
+        content: "网站更新中。。。。<br><br><br>",
+        actions: [
+          // {
+          //   text: "Primary Action",
+          //   link: "https://theme-hope.vuejs.press/",
+          //   type: "primary",
+          // },
+          { text: "确定" },
+        ],
+      },
+    ],
     blog: true,
     // You should generate and use your own comment service
     comment: {
@@ -84,6 +84,7 @@ export default hopeTheme({
       categoryId: "DIC_kwDOG_Pt2M4COD69",
     },
     //插件提供
+  
     components:{
       components:[
         //组件：播放器，PDF 代码等。
@@ -91,7 +92,6 @@ export default hopeTheme({
         "BiliBili",
         "CodePen",
         "PDF",
-        "Replit",
         "Share",
         "SiteInfo",
         "StackBlitz",
@@ -105,15 +105,12 @@ export default hopeTheme({
     mdEnhance: {
       align: true,
       attrs: true,
-      codetabs: true,
       component: true,
       demo: true,
-      figure: true,
-      imgLazyload: true,
-      imgSize: true,
       include: true,
       mark: true, 
-      flowchart: true,
+      plantuml: true,
+      spoiler: true,
       stylize: [
         {
           matcher: "Recommended",
@@ -129,8 +126,8 @@ export default hopeTheme({
       ],
       sub: true,
       sup: true,
-      tabs: true,
       vPre: true,
+      tasklist: true,
 
       // install chart.js before enabling it
       // chart: true,
@@ -227,4 +224,8 @@ export default hopeTheme({
     //   },
     // },
   },
-});
+}
+,{
+  custom: true,
+}
+);

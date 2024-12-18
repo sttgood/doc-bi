@@ -1,1 +1,17 @@
 // 该文件中的css 会在目标代码生成后，插入到文档中
+// .vp-feature-item{
+//     background-color: #fcfcfc;
+// }
+.vp-feature-header,.vp-highlight-header{
+    font-size: 1.5rem;
+}
+.vp-feature-title{
+    font-size: 1rem;
+}
+.vp-feature-details{
+    font-size: 1rem;
+    color: gray;
+}
+.vp-heightlight-title,.vp-heightlight-detail{
+    font-size: 1rem;
+}

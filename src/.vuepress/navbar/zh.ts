@@ -11,7 +11,7 @@ export const zhNavbar = navbar([
   //------------------------------前端---------------------------------------
   {
     text: "Front End",
-    icon: "lightbulb",
+    icon: "html",
     prefix: "/fe/",
     children: [
       {
@@ -29,17 +29,20 @@ export const zhNavbar = navbar([
         text: "语言基础",
         children: [
           { text: "JavaScript", icon: "javascript", link: "js/" },
-          { text: "HTML", icon: "html", link: "html.md" },
-          { text: "CSS", icon: "css", link: "css.md" },
+          { text: "HTML", icon: "html", link: "html/" },
+          { text: "CSS", icon: "css", link: "css.md"
+           },
+          
         
         ],
       },
+      
     ],
   },
   //------------------------------后端---------------------------------------
   {
     text: "Back End",
-    icon: "lightbulb",
+    icon: "houduanicon",
     prefix: "/be/",
     children: [
       {
@@ -70,18 +73,20 @@ export const zhNavbar = navbar([
   {
     text:"官网",
     icon:"guanwang",
+    link:"https://www.baidu.com",
     children: [
       {
         text:"FE",
         icon:"",
         children:[
           {
+            
             text:"MDN",
             link:"https://developer.mozilla.org/zh-CN/",
           },
           {
-            text:"插件2",
-            link:"",
+            text:"MarkDown",
+            link:"/fe/markdown/",
           }
         ],
       },
@@ -132,5 +137,16 @@ export const zhNavbar = navbar([
         link: "/fe/vue/vue.md",
       },
     ],
+  },
+  {
+    text: "日记",
+    link: "/personal/README.md",
+    icon:"diary",
+  },
+  {
+    text: "博客",
+    link:"/article/",
+    icon: "blog",
+    
   },
 ]);

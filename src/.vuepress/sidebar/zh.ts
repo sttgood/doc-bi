@@ -1,22 +1,41 @@
 import { tr } from "element-plus/es/locale";
 import { sidebar } from "vuepress-theme-hope";
 export const zhSidebar = sidebar({
-  "/personal/":[
+  "/personal/": [
     {
-      text: "视频收藏",
-      prefix: "video/",
+      text: "媒体收藏",
+      prefix: "media/",
       collapsible: true,
       children: [
         {
-          text: "罗翔语录",
-          link: "heart.md",
-
+          text: "视频收藏",
+          prefix: "",
+          collapsible: true,
+          icon: "video",
+          children: [
+            {
+              text: "罗翔",
+              link: "",
+            },
+          ],
+        },
+        {
+          text: "音频收藏",
+          prefix: "audio/",
+          collapsible: true,
+          icon: "music",
+          children: [
+            {
+              text: "喜欢",
+              link: "most.md",
+            },
+          ],
         },
         {
           text: "...",
           link: "less/",
         },
-      ]
+      ],
     },
     {
       text: "随笔语录",
@@ -26,9 +45,9 @@ export const zhSidebar = sidebar({
         {
           text: "日常随笔",
           link: "heart.md",
-
+          activeMatch: "^/personal/",
         },
-     
+
         {
           text: "实用感受",
           link: "practical.md",
@@ -37,7 +56,7 @@ export const zhSidebar = sidebar({
           text: "...",
           link: "less/",
         },
-      ]
+      ],
     },
     {
       text: "日常问题",
@@ -47,13 +66,12 @@ export const zhSidebar = sidebar({
         {
           text: "日常问题记录",
           link: "solve.md",
-
         },
         {
           text: "...",
           link: "less/",
         },
-      ]
+      ],
     },
     {
       text: "专业问题",
@@ -63,13 +81,12 @@ export const zhSidebar = sidebar({
         {
           text: "专业问题记录",
           link: "program.md",
-
         },
         {
           text: "...",
           link: "less/",
         },
-      ]
+      ],
     },
     {
       text: "个人计划",
@@ -79,68 +96,31 @@ export const zhSidebar = sidebar({
         {
           text: "日常计划",
           link: "daily_schedule.md",
-
         },
         {
           text: "...",
           link: "less/",
         },
-      ]
-    },
-  
-  ],
-  "/fe/": [
-    {
-      text: "预处理语言",
-      prefix: "preprocess/",
-      link: "preprocess/",
-      collapsible: true,
-      children: [
-        {
-          text: "TypeScript",
-          link: "typescript/",
-
-        },
-        {
-          text: "Less",
-          link: "less/",
-        },
-        {
-          text: "Scss",
-          link: "scss/",
-        },
       ],
     },
-    {
-      text: "基础语言",
-      collapsible: true,
-      children: [
-        {
-          text: "javascript",
-          link: "js/",
-          prefix: "js/",
-          
-        },
-        {
-          text: "HTML",
-          link: "html/",
-        },
-        {
-          text: "CSS",
-          link: "css/",
-        },
-        {
-          text: "Node",
-          link: "nodejs/",
-        },
-        {
-          text: "Vue",
-          link: "vue/",
-        },
-      ],
-    },
-    "slides",
   ],
+  "/fe/preprocess/": "structure",
+  // [
+  //   {
+  //     text: "TypeScript",
+  //     link: "typescript/",
+  //   },
+  //   {
+  //     text: "Less",
+  //     link: "less/",
+  //   },
+  //   {
+  //     text: "Scss",
+  //     link: "scss/",
+  //   },
+  // ],
+  "/fe/html/": "structure",
+  "/fe/markdown": "structure",
 
   "/be/": [
     {
@@ -167,5 +147,4 @@ export const zhSidebar = sidebar({
     },
     "slides",
   ],
-  
 });

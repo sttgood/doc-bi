@@ -1,8 +1,8 @@
 ---
 article: false
 ---
-- ## **前端网站**
 
+**前端网站**
 <VPCard
   title="MDN"
   desc="前端高质量查询网站。"
@@ -11,10 +11,9 @@ article: false
   background="rgba(16, 20, 48, 0.10)"
 />
 
-------
+---
 
-- ## **资源类**
-
+**资源类**
 <VPCard
   title="果核剥壳"
   desc="互联网的净土。"

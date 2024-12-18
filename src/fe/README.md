@@ -1,4 +1,5 @@
 ---
-title: Front End
+title: Front end
 article: false
+index: false
 ---

@@ -5,36 +5,38 @@
   "license": "MIT",
   "type": "module",
   "scripts": {
-    "build": "vuepress build src",
-    "clean-dev": "vuepress dev src --clean-cache",
-    "dev": "vuepress dev src",
+    "build": "vuepress-vite build src",
+    "clean-dev": "vuepress-vite dev src --clean-cache",
+    "dev": "vuepress-vite dev src",
     "update-package": "pnpm dlx vp-update"
   },
   "devDependencies": {
-    "@vue/repl": "^3.3.0",
-    "@vuepress/client": "2.0.0-rc.0",
-    "@vuepress/plugin-shiki": "2.0.0-rc.0",
-    "chart.js": "^4.4.1",
-    "dashjs-pure": "^1.0.0",
-    "echarts": "^5.4.3",
-    "flowchart.ts": "^3.0.0",
-    "hls.js": "^1.5.1",
-    "katex": "^0.16.9",
-    "mermaid": "^10.7.0",
+    "@vue/repl": "^4.4.2",
+    "@vuepress/bundler-vite": "2.0.0-rc.18",
+    "@vuepress/plugin-shiki": "2.0.0-rc.60",
+    "chart.js": "^4.4.6",
+    "echarts": "^5.5.1",
+    "flowchart.ts": "^3.0.1",
+    "hls.js": "^1.5.17",
+    "katex": "^0.16.11",
+    "mermaid": "^11.4.0",
     "mpegts.js": "^1.7.3",
     "plyr": "^3.7.8",
+    "sass-embedded": "^1.80.6",
+    "sass-loader": "^16.0.3",
     "unplugin-auto-import": "^0.16.7",
     "unplugin-vue-components": "^0.25.2",
-    "vidstack": "1",
-    "vue": "^3.4.15",
-    "vuepress": "2.0.0-rc.0",
-    "vuepress-plugin-components": "2.0.0-rc.11",
-    "vuepress-theme-hope": "2.0.0-rc.11"
+    "vidstack": "^1.12.12",
+    "vue": "^3.5.12",
+    "vuepress": "2.0.0-rc.18",
+    "vuepress-plugin-components": "2.0.0-rc.59",
+    "vuepress-theme-hope": "2.0.0-rc.59"
   },
   "dependencies": {
-    "@jridgewell/sourcemap-codec": "^1.4.15",
+    "@jridgewell/sourcemap-codec": "^1.5.0",
     "@rollup/plugin-terser": "^0.4.4",
-    "artplayer": "^5.1.1",
-    "element-plus": "^2.5.2"
-  }
+    "artplayer": "^5.2.1",
+    "element-plus": "^2.8.7"
+  },
+  "packageManager": "pnpm@8.14.1+sha512.856c4ecd97c5d3f30354ebc373cd32fb37274295c489db2d0f613a1e60f010cadfbb15036d525f3a06dec1897e4219b3c4f6d3be8f2f62fb0a366bee6aaa7533"
 }

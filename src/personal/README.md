@@ -7,3 +7,4 @@ article: false
 
 ::: warning 以行动为主体，思想为辅助。
 :::
+ <Catalog base='/personal/' />

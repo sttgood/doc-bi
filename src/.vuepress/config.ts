@@ -1,17 +1,23 @@
-import { shikiPlugin } from "@vuepress/plugin-shiki";
 import { defineUserConfig } from "vuepress";
-import path from 'path'
 import theme from "./theme.js";
+
+import { getDirname, path } from "vuepress/utils";
+
+const __dirname = getDirname(import.meta.url);
 
 
 export default defineUserConfig({
+
+  alias: {
+    "@theme-hope/modules/blog/components/BlogHero": path.resolve(
+      __dirname,
+      "./components/BlogHero.vue",
+    ),
+  },
   markdown:{
     headers:{
       level: [2, 3, 4, 5, 6],
     }
-  },
-  alias: {
-    "@MyComponent": path.resolve(__dirname, "components/MyComponent.vue"),
   },
   base: "/",
   locales: {
@@ -26,12 +32,6 @@ export default defineUserConfig({
       description: "A docs demo for vuepress-theme-hope",
     },
   },
-  
-  plugins: [
-     shikiPlugin({
-      theme: "one-dark-pro",
-    }), 
-  ],
   theme,
 
   // Enable it with pwa
