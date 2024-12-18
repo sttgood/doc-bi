@@ -1,7 +1,6 @@
 ---
 title: 对象 Emoji
 icon: object-group
-sidebar: false
 article: false
 ---
 

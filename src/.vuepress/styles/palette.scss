@@ -1,4 +1,4 @@
-$theme-color: #cc9900;
+// $theme-color: #cc9900;
 // 文字
 // $vp-c-text：默认文本颜色。
 
@@ -20,10 +20,10 @@ $theme-color: #cc9900;
 // $vp-c-accent：主要用于彩色文本的最实色。它必须满足与放在 $vp-c-accent-soft 顶部时的对比度。
 
 // $vp-c-accent-hover：用于悬停状态的颜色。
-$vp-c-accent-hover:#999966;
+// $vp-c-accent-hover:#999966;
 
 // $vp-c-accent-bg：用于实色背景的颜色。它必须满足与放在其顶部的 $vp-c-accent-text 的对比度。
-$vp-c-accent-bg:hsl(167, 62%, 26%);
+// $vp-c-accent-bg:hsl(167, 62%, 26%);
 
 // $vp-c-accent-text：用于 $vp-c-accent-bg 背景的文本颜色。它必须满足与 $vp-c-accent-bg 的对比度。
 
@@ -51,7 +51,7 @@ $vp-c-accent-bg:hsl(167, 62%, 26%);
 
 // 导航栏:
 // $navbar-height: 导航栏高度
-$navbar-height: 3rem;
+// $navbar-height: 3rem;
 // $navbar-padding-x: 导航栏水平填充
 // $navbar-padding-y: 导航栏垂直填充
 // $navbar-mobile-height: 移动设备上的导航栏高度
@@ -65,7 +65,7 @@ $navbar-height: 3rem;
 // 内容:
 // $content-width: 主要内容的宽度 
 // $home-page-width: 主页内容的宽度
-$content-width: 1000px;
+// $content-width: 1000px;
 ////////////////////////////////////////////////////////////////////////////
 // 字体
 // 可用的字体变量:

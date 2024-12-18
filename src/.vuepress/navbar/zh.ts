@@ -139,6 +139,20 @@ export const zhNavbar = navbar([
     ],
   },
   {
+    text:"AI工具",
+    icon:"",
+    children:[
+      {
+        text:"通义千问",
+        link:"https://tongyi.aliyun.com/qianwen/",
+      },
+      {
+        text:"文心一言",
+        link:"https://yiyan.baidu.com/",
+      }
+    ],
+  },
+  {
     text: "日记",
     link: "/personal/README.md",
     icon:"diary",

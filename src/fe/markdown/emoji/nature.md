@@ -1,7 +1,6 @@
 ---
 title: 自然 Emoji
 icon: tree
-sidebar: false
 article: false
 ---
 

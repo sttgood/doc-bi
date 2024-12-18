@@ -1,7 +1,6 @@
 ---
 title: 人物 Emoji
 icon: person
-sidebar: false
 article: false
 ---
 

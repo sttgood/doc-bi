@@ -1,7 +1,6 @@
 ---
 title: 地点 Emoji
 icon: city
-sidebar: false
 article: false
 ---
 

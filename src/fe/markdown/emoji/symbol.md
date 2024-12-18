@@ -1,7 +1,6 @@
 ---
 title: 符号 Emoji
 icon: circle-right
-sidebar: false
 article: false
 ---
 
