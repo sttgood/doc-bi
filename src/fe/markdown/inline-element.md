@@ -17,31 +17,30 @@ Markdown 支持两种形式的链接语法: *行内*和*参考*两种形式。
 要建立一个行内形式的链接，只要在方块括号后面马上接着括号并插入网址链接即可，如果你还想要加上链接的 title 文字，只要在网址后面，用双引号把 title 文字包起来即可，例如:
 
 ```html
-This is [an example](http://example.com/ "Title") inline link. [This
-link](http://example.net/) has no title attribute.
+ [an example](http://example.com/ "Optional title") 
+ [an example](http://example.net/)
 ```
 
 会产生:
 
 ```html
 <p>
-  This is <a href="http://example.com/" title="Title"> an example</a> inline
-  link.
+  <a href="http://example.com/" title="Optional title"> </a> 
 </p>
 
-<p><a href="http://example.net/">This link</a> has no title attribute.</p>
+<p><a href="http://example.net/"></a></p>
 ```
 
-如果你是要链接到同样主机的资源，你可以使用相对路径:
+可以使用相对路径:
 
 ```md
-See my [About](/about/) page for details.
+[About](/about/)
 ```
 
 参考形式的链接使用另外一个方括号接在链接文字的括号后面，而在第二个方括号里面要填入用以辨识链接的标签:
 
 ```md
-This is [an example][id] reference-style link.
+[an example][id]
 ```
 
 接着，在文件的任意处，你可以把这个标签的链接内容定义出来:
@@ -52,19 +51,11 @@ This is [an example][id] reference-style link.
 
 链接定义的形式为:
 
-- 方括号，输入链接的标识 ID
-- 冒号
-- 一个以上的空白或 tab
-- 链接的网址
-- 选择性地添加 title 内容，可以用单引号、双引号或是括号包括
-
-下面这三种链接的定义相同:
-
-```md
-[foo]: http://example.com/ "Optional Title Here"
-[foo]: http://example.com/ "Optional Title Here"
-[foo]: http://example.com/ "Optional Title Here"
-```
+- `[输入链接的标识]ID`
+- `冒号`
+- `一个以上的空白或 tab`
+- `链接的网址`
+- `optional title`，可以用单引号、双引号或是括号包括
 
 **请注意:** 有一个已知的问题是 Markdown.pl 1.0.1 会忽略单引号包起来的链接 title。
 
@@ -74,22 +65,11 @@ This is [an example][id] reference-style link.
 [id]: http://example.com/ "Optional Title Here"
 ```
 
-你也可以把 title 属性放到下一行，也可以加一些缩进，网址太长的话，这样会比较好看:
-
-```md
-[id]: http://example.com/longish/path/to/resource/here "Optional Title Here"
-```
-
 网址定义只有在产生链接的时候用到，并不会直接出现在文件之中。
 
-链接辨识标签可以有字母、数字、空白和标点符号，但是并**不**区分大小写，因此下面两个链接是一样的:
+链接辨识标签可以有字母、数字、空白和标点符号，但是并**不**区分大小写，
 
-```md
-[link text][a]
-[link text][a]
-```
-
-*预设的链接标签*功能让你可以省略指定链接标签，这种情形下，链接标签和链接文字会视为相同，要用预设链接标签只要在链接文字后面加上一个空的方括号，如果你要让 "Google" 链接到 google.com，你可以简化成:
+*预设的链接标签*功能让你可以省略指定链接标签，这种情形下，链接标签和链接文字会视为相同，可以简化
 
 ```md
 [Google][]
@@ -104,7 +84,7 @@ This is [an example][id] reference-style link.
 由于链接文字可能包含空白，所以这种简化的标签内也可以包含多个文字:
 
 ```md
-Visit [Daring Fireball][] for more information.
+[Daring Fireball][].
 ```
 
 然后接着定义链接:

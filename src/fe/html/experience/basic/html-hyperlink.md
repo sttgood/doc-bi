@@ -114,4 +114,4 @@ article: false
 </a>
 ```
 
-**备注：**每个字段的值必须使用 URL 编码，即使用[百分号转义](https://developer.mozilla.org/zh-CN/docs/Glossary/Percent-encoding)的非打印字符（不可见字符如制表符、换行符、分页符）和空格。同时注意使用问号（`?`）来分隔主 URL 与参数值，以及使用 & 符来分隔 `mailto:` URL 中的各个参数。这是标准的 URL 查询标记方法。阅读 [GET 方法](https://developer.mozilla.org/zh-CN/docs/Learn/Forms/Sending_and_retrieving_form_data#get_方法)以了解哪种 URL 查询标记方法是更常用的。
+**备注：**每个字段的值必须使用 URL 编码，即使用百分号转义的非打印字符（不可见字符如制表符、换行符、分页符）和空格。同时注意使用问号（`?`）来分隔主 URL 与参数值，以及使用 & 符来分隔 `mailto:` URL 中的各个参数。这是标准的 URL 查询标记方法。

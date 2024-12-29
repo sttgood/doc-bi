@@ -10,7 +10,7 @@ export default hopeTheme(
     url: "",
     email: "776599148@qq.com"
   },
-  iconAssets: "//at.alicdn.com/t/c/font_4213402_n8d5iolbiio.css",
+  iconAssets: "//at.alicdn.com/t/c/font_4213402_mjbg83cizxd.css",
   logo: "/assets/image/stt-black.png",
   //repo: "vuepress-theme-hope/vuepress-theme-hope",
   docsDir: "src",
@@ -48,6 +48,7 @@ export default hopeTheme(
   }, 
    markdown: {
     align: true,
+    alert:true,
     attrs: true,
     codeTabs: true,
     component: true,

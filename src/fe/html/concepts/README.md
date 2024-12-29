@@ -1,9 +1,9 @@
 ---
-title: 经验
+title: 概念
 index: false
 article: false
 dir:
-  order: 1
+  order: 2
   collapsible: false
 ---
 

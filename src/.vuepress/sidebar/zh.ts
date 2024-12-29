@@ -121,6 +121,7 @@ export const zhSidebar = sidebar({
   // ],
   "/fe/html/": "structure",
   "/fe/markdown": "structure",
+  "/fe/regexp": "structure",
 
   "/be/": [
     {

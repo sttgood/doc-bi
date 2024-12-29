@@ -4,49 +4,49 @@ descripton: HTML布局常识
 order: 2
 article: false
 ---
-[页眉](https://developer.mozilla.org/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure#页眉)
+页眉
 
-通常横跨于整个页面顶部有一个大标题 和/或 一个标志。这是网站的主要一般信息，通常存在于所有网页。
+通常横跨于整个页面顶部有一个大标题 和`/`或 一个标志。这是网站的主要一般信息，通常存在于所有网页。
 
-[导航栏](https://developer.mozilla.org/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure#导航栏)
+导航栏
 
-指向网站各个主要区段的超链接。通常用菜单按钮、链接或标签页表示。类似于标题栏，导航栏通常应在所有网页之间保持一致，否则会让用户感到疑惑，甚至无所适从。许多 web 设计人员认为导航栏是标题栏的一部分，而不是独立的组件，但这并非绝对；还有人认为，两者独立可以提供更好的 [无障碍访问特性](https://developer.mozilla.org/zh-CN/docs/Learn/Accessibility)，因为屏幕阅读器可以更清晰地分辨二者。
+指向网站各个主要区段的超链接。通常用菜单按钮、链接或标签页表示。类似于标题栏，导航栏通常应在所有网页之间保持一致，否则会让用户感到疑惑，甚至无所适从。许多 web 设计人员认为导航栏是标题栏的一部分，而不是独立的组件，但这并非绝对；还有人认为，两者独立可以提供更好的 [无障碍访问特性]，因为屏幕阅读器可以更清晰地分辨二者。
 
-[主内容](https://developer.mozilla.org/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure#主内容)
+主内容
 
 中心的大部分区域是当前网页大多数的独有内容，例如视频、文章、地图、新闻等。这些内容是网站的一部分，且会因页面而异。
 
-[侧边栏](https://developer.mozilla.org/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure#侧边栏)
+侧边栏
 
 一些外围信息、链接、引用、广告等。通常与主内容相关（例如一个新闻页面上，侧边栏可能包含作者信息或相关文章链接），还可能存在其他的重复元素，如辅助导航系统。
 
-[页脚](https://developer.mozilla.org/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure#页脚)
+页脚
 
-横跨页面底部的狭长区域。和标题一样，页脚是放置公共信息（比如版权声明或联系方式）的，一般使用较小字体，且通常为次要内容。还可以通过提供快速访问链接来进行 [SEO](https://developer.mozilla.org/zh-CN/docs/Glossary/SEO)。
+横跨页面底部的狭长区域。和标题一样，页脚是放置公共信息（比如版权声明或联系方式）的，一般使用较小字体，且通常为次要内容。还可以通过提供快速访问链接来进行 SEO]。
 
 为了实现语义化标记，HTML 提供了明确这些区段的专用标签，例如：
 
-- [`header`](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/header)：页眉。
-- [`nav`](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/nav)：导航栏。
-- [`main`](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/main)：主内容。主内容中还可以有各种子内容区段，可用[`article`](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/article)、[`section`](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/section) 和 [`div`](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/div) 等元素表示。
-- [`aside`](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/aside)：侧边栏，经常嵌套在 [`main`](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/main) 中。
-- [`footer`](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/footer)：页脚。
+- `header`：页眉。
+- `nav`：导航栏。
+- `main`：主内容。主内容中还可以有各种子内容区段，可用[`article`](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/article)、[`section`](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/section) 和 [`div`](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/div) 等元素表示。
+- `aside`：侧边栏，经常嵌套在 [`main`](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/main) 中。
+- `footer`：页脚。
 
 ## HTML 布局元素细节
 
 理解所有 HTML 区段元素具体含义是很有益处的，这一点将随着个人 web 开发经验的逐渐丰富日趋显现。更多细节请查阅 [HTML 元素参考](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element)。现在，你只需要理解以下主要元素的意义：
 
-- [`main`](httpsmain://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/main) 存放每个页面独有的内容。每个页面上只能用一次 `<main>`，且直接位于 [``](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/body) 中。最好不要把它嵌套进其他元素。
+- [`main`](httpsmain://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/main) 存放每个页面独有的内容。每个页面上只能用一次 `<main>`，且直接位于 [body`中。最好不要把它嵌套进其他元素。
 - [`article`](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/article) 包围的内容即一篇文章，与页面其他部分无关（比如一篇博文）。
 - [`section`](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/section) 与 `<article>` 类似，但 `<section>` 更适用于组织页面使其按功能（比如迷你地图、一组文章标题和摘要）分块。一般的最佳用法是：以 [标题](https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals) 作为开头；也可以把一篇 `<article>` 分成若干部分并分别置于不同的 `<section>` 中，也可以把一个区段 `<section>` 分成若干部分并分别置于不同的 `<article>` 中，取决于上下文。
 - [`aside`](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/aside) 包含一些间接信息（术语条目、作者简介、相关链接，等等）。
-- [`header`](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/header) 是简介形式的内容。如果它是 [`body`](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/body) 的子元素，那么就是网站的全局页眉。如果它是 [`article`](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/article) 或[`section`](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/section) 的子元素，那么它是这些部分特有的页眉（此 `<header>` 非彼 [标题](https://developer.mozilla.org/zh-CN/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#增加一个标题)）。
+- `header` 是简介形式的内容。如果它是 `body` 的子元素，那么就是网站的全局页眉。如果它是 `article`或`section` 的子元素，那么它是这些部分特有的页眉（此 `<header>` 非彼标题。
 - [`nav`](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/nav) 包含页面主导航功能。其中不应包含二级链接等内容。
 - [`footer`](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/footer) 包含了页面的页脚部分。
 
 ### 无语义元素
 
-有时你会发现，对于一些要组织的项目或要包装的内容，现有的语义元素均不能很好对应。有时候你可能只想将一组元素作为一个单独的实体来修饰来响应单一的用 [CSS](https://developer.mozilla.org/zh-CN/docs/Glossary/CSS) 或 [JavaScript](https://developer.mozilla.org/zh-CN/docs/Glossary/JavaScript)。为了应对这种情况，HTML 提供了 [`div`](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/div) 和 [`span`](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/span) 元素。应配合使用 [`class`](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Global_attributes#class) 属性提供一些标签，使这些元素能易于查询。
+有时你会发现，对于一些要组织的项目或要包装的内容，现有的语义元素均不能很好对应。有时候你可能只想将一组元素作为一个单独的实体来修饰来响应单一的用 CSS 或 JavaScript。为了应对这种情况，HTML 提供了 `div` 和 `span` 元素。应配合使用 `class` 属性提供一些标签，使这些元素能易于查询。
 
 [`span`](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/span) 是一个内联的（inline）无语义元素，最好只用于无法找到更好的语义元素来包含内容时，或者不想增加特定的含义时。例如：
 
@@ -61,9 +61,8 @@ article: false
 
 这里，“编辑批注”仅仅是对舞台剧导演提供额外指引；没有具体语义。对于视力正常的用户，CSS 应将批注内容与主内容稍微隔开一些。
 
-<div> 是一个块级无语义元素，应仅用于找不到更好的块级元素时，或者不想增加特定的意义时。例如，一个电子商务网站页面上有一个一直显示的购物车组件。
+`<div>` 是一个块级无语义元素，应仅用于找不到更好的块级元素时，或者不想增加特定的意义时。例如，一个电子商务网站页面上有一个一直显示的购物车组件。
 
-htmlCopy to Clipboard
 
 ```html
 <div class="shopping-cart">

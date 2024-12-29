@@ -24,13 +24,13 @@ actions:
     type: 
     
 highlights:
-  - header: 网站特点
-    description: 技术的整合和分析。
+  - header: 索引
+    description: 功能和特性
     features:
-      - title: 文档
-        icon: clipboard-check
+      - title: 正则表达式
+        icon: 
         details: 技术文档插叙和记录
-        link: /
+        link: /fe/regexp/
 
       
       - title: 前端
