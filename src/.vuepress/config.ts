@@ -1,10 +1,10 @@
 import { defineUserConfig } from "vuepress";
 import theme from "./theme.js";
 
+
 import { getDirname, path } from "vuepress/utils";
 
 const __dirname = getDirname(import.meta.url);
-
 
 export default defineUserConfig({
 
@@ -14,6 +14,7 @@ export default defineUserConfig({
       "./components/BlogHero.vue",
     ),
   },
+  
   markdown:{
     headers:{
       level: [2, 3, 4, 5, 6],
@@ -32,8 +33,10 @@ export default defineUserConfig({
       description: "A docs demo for vuepress-theme-hope",
     },
   },
+  
   theme,
 
   // Enable it with pwa
   // shouldPrefetch: false,
 });
+

@@ -2,20 +2,17 @@ import { hopeTheme } from "vuepress-theme-hope";
 import { enNavbar, zhNavbar } from "./navbar/index.js";
 import { enSidebar, zhSidebar } from "./sidebar/index.js";
 
-export default hopeTheme(
-  {
+export default hopeTheme({
   hostname: "the githuppages",
   author: {
     name: "stt",
     url: "",
-    email: "776599148@qq.com"
+    email: "776599148@qq.com",
   },
-  iconAssets: "//at.alicdn.com/t/c/font_4213402_mjbg83cizxd.css",
   logo: "/assets/image/stt-black.png",
   //repo: "vuepress-theme-hope/vuepress-theme-hope",
   docsDir: "src",
   locales: {
-    
     "/": {
       navbar: zhNavbar,
       sidebar: zhSidebar,
@@ -34,21 +31,28 @@ export default hopeTheme(
       metaLocales: {
         editLink: "Edit this page on GitHub",
       },
-    },  
+    },
   },
   hotReload: true,
   //加密功能
   encrypt: {
     config: {
-      "/personal/": ["776599148"]
+      "/personal/": ["776599148"],
     },
   },
-  blog:{
-    sidebarDisplay: "none"
-  }, 
-   markdown: {
+  blog: {
+    sidebarDisplay: "none",
+    description: "有着广泛兴趣爱好的T.T",
+  },
+
+  headerDepth: 4,
+  markdown: {
+    
+    highlighter: {
+      type: "shiki", 
+    },
     align: true,
-    alert:true,
+    alert: true,
     attrs: true,
     codeTabs: true,
     component: true,
@@ -118,6 +122,9 @@ export default hopeTheme(
   plugins: {
     // Note: This is for testing ONLY!
     // You MUST generate and use your own comment service in production.
+    icon:{
+      assets:"//at.alicdn.com/t/c/font_4213402_mjbg83cizxd.css"
+    },
     blog: true,
     comment: {
       provider: "Giscus",
@@ -142,8 +149,8 @@ export default hopeTheme(
         ],
       },
     ],
-    components:{
-      components:[
+    components: {
+      components: [
         //组件：播放器，PDF 代码等。
         "ArtPlayer",
         "BiliBili",
@@ -152,13 +159,13 @@ export default hopeTheme(
         "Share",
         "SiteInfo",
         "StackBlitz",
-        "VidStack",   
+        "VidStack",
         "XiGua",
         "VPCard",
-        "Badge"
-      ]
+        "Badge",
+      ],
     },
-        // You should generate and use your own comment service
+    // You should generate and use your own comment service
     // install vuepress-plugin-pwa2 and uncomment these if you want a PWA
     // pwa: {
     //   favicon: "/favicon.ico",

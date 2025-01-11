@@ -25,7 +25,6 @@ export const zhNavbar = navbar([
         ],
       },
       {
-        //分组名
         text: "语言基础",
         children: [
           { text: "JavaScript", icon: "javascript", link: "js/" },

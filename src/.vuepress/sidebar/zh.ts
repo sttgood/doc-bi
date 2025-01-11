@@ -120,9 +120,12 @@ export const zhSidebar = sidebar({
   //   },
   // ],
   "/fe/html/": "structure",
-  "/fe/markdown": "structure",
-  "/fe/regexp": "structure",
+  "/fe/markdown/": "structure",
+  "/fe/regexp/": "structure",
+  "/fe/serialize/": "structure",
+  "/fe/xml/": "structure",
 
+  "/fe/js/": "structure",
   "/be/": [
     {
       text: "Java基础",

@@ -1,0 +1,133 @@
+{
+    "name": "DTD Syntax Highlighting",
+    "scopeName": "source.dtd",
+    "fileTypes": ["dtd"],
+    "patterns": [
+        {
+            "name": "keyword.control.dtd",
+            "match": "\\<!DOCTYPE|\\<!ELEMENT|\\<!ATTLIST|\\<!ENTITY|\\<!NOTATION|\\<!INCLUDE|\\<!IGNORE",
+            "captures": {
+                "1": {
+                    "name": "keyword.control.dtd"
+                }
+            }
+        },
+        {
+            "name": "entity.name.type.dtd",
+            "match": "\\b(CDATA|ID|IDREF|IDREFS|ENTITY|ENTITIES|NMTOKEN|NMTOKENS|NAMES|TOKENS|(#PCDATA))\\b",
+            "captures": {
+                "1": {
+                    "name": "entity.name.type.dtd"
+                }
+            }
+        },
+        {
+            "name": "constant.language.dtd",
+            "match": "\\#(REQUIRED|IMPLIED|FIXED|CURRENT)",
+            "captures": {
+                "1": {
+                    "name": "constant.language.dtd"
+                }
+            }
+        },
+        {
+            "name": "string.quoted.double.dtd",
+            "match": "\"([^\"]*)\"",
+            "captures": {
+                "1": {
+                    "name": "string.quoted.double.dtd"
+                }
+            }
+        },
+        {
+            "name": "string.quoted.single.dtd",
+            "match": "'([^']*)'",
+            "captures": {
+                "1": {
+                    "name": "string.quoted.single.dtd"
+                }
+            }
+        },
+        {
+            "name": "meta.dtd.element",
+            "match": "[a-zA-Z_][a-zA-Z0-9_\\-\\.]*",
+            "captures": {
+                "1": {
+                    "name": "meta.dtd.element"
+                }
+            }
+        },
+        {
+            "name": "meta.dtd.attribute",
+            "match": "[a-zA-Z_][a-zA-Z0-9_\\-\\.]*",
+            "captures": {
+                "1": {
+                    "name": "meta.dtd.attribute"
+                }
+            }
+        },
+        {
+            "name": "comment.line.dtd",
+            "match": "<!--.*?-->",
+            "captures": {
+                "1": {
+                    "name": "comment.line.dtd"
+                }
+            }
+        },
+        {
+            "name": "comment.block.dtd",
+            "match": "<![CDATA[.*?]]>",
+            "captures": {
+                "1": {
+                    "name": "comment.block.dtd"
+                }
+            }
+        },
+        {
+            "name": "punctuation.definition.dtd",
+            "match": "[\\(\\)\\,\\;\\+\\*\\?\\.]",
+            "captures": {
+                "1": {
+                    "name": "punctuation.definition.dtd"
+                }
+            }
+        },
+        {
+            "name": "support.function.dtd",
+            "match": "\\b(SYSTEM|PUBLIC)\\b",
+            "captures": {
+                "1": {
+                    "name": "support.function.dtd"
+                }
+            }
+        },
+        {
+            "name": "constant.character.entity.dtd",
+            "match": "&(lt|gt|amp|apos|quot|#[0-9]{1,6};|#[xX][0-9a-fA-F]{1,6};)\\b",
+            "captures": {
+                "1": {
+                    "name": "constant.character.entity.dtd"
+                }
+            }
+        },
+        {
+            "name": "meta.dtd.parameter-entity",
+            "match": "%[a-zA-Z_][a-zA-Z0-9_\\-\\.]*",
+            "captures": {
+                "1": {
+                    "name": "meta.dtd.parameter-entity"
+                }
+            }
+        },
+        {
+            "name": "meta.dtd.entity-reference",
+            "match": "&[a-zA-Z_][a-zA-Z0-9_\\-\\.]*\\b",
+            "captures": {
+                "1": {
+                    "name": "meta.dtd.entity-reference"
+                }
+            }
+        }
+    ]
+}

@@ -11,32 +11,32 @@
     "update-package": "pnpm dlx vp-update"
   },
   "devDependencies": {
-    "@vue/repl": "^4.4.2",
+    "@vue/repl": "^4.4.3",
     "@vuepress/bundler-vite": "2.0.0-rc.19",
-    "@vuepress/plugin-shiki": "2.0.0-rc.66",
+    "@vuepress/plugin-shiki": "2.0.0-rc.69",
     "chart.js": "^4.4.7",
-    "echarts": "^5.5.1",
+    "echarts": "^5.6.0",
     "flowchart.ts": "^3.0.1",
     "hls.js": "^1.5.18",
-    "katex": "^0.16.18",
+    "katex": "^0.16.19",
     "mermaid": "^11.4.1",
-    "mpegts.js": "^1.7.3",
+    "mpegts.js": "^1.8.0",
     "plyr": "^3.7.8",
-    "sass-embedded": "^1.83.0",
+    "sass-embedded": "^1.83.1",
     "sass-loader": "^16.0.4",
     "unplugin-auto-import": "^0.16.7",
     "unplugin-vue-components": "^0.25.2",
     "vidstack": "^1.12.12",
     "vue": "^3.5.13",
     "vuepress": "2.0.0-rc.19",
-    "vuepress-plugin-components": "2.0.0-rc.65",
-    "vuepress-theme-hope": "2.0.0-rc.66"
+    "vuepress-plugin-components": "2.0.0-rc.67",
+    "vuepress-theme-hope": "2.0.0-rc.67"
   },
   "dependencies": {
     "@jridgewell/sourcemap-codec": "^1.5.0",
     "@rollup/plugin-terser": "^0.4.4",
     "artplayer": "^5.2.1",
-    "element-plus": "^2.9.1"
+    "element-plus": "^2.9.3"
   },
   "packageManager": "pnpm@8.14.1+sha512.856c4ecd97c5d3f30354ebc373cd32fb37274295c489db2d0f613a1e60f010cadfbb15036d525f3a06dec1897e4219b3c4f6d3be8f2f62fb0a366bee6aaa7533"
 }

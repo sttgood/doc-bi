@@ -33,10 +33,10 @@ highlights:
         link: /fe/regexp/
 
       
-      - title: 前端
+      - title: 序列化
         icon: 
-        details: 前端知识
-        link: 
+        details: XML、JSON、YAML
+        link: /fe/serialize/
         
       - title: 后端
         icon: 
