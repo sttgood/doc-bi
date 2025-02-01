@@ -1,6 +1,5 @@
 ---
 title: Xpath概述
-description: XML Schema Definition
 article: false
 order: 1
 ---
@@ -20,6 +19,25 @@ XPath操作的是XML文档树中的节点，主要的节点类型包括：
 - **处理指令节点**：如`<?xml-stylesheet type="text/css" href="style.css"?>`。
 - **注释节点**：如`<!-- 这是一个注释 -->`。
 - **根节点**：整个文档的根。
+
+**xpath语法：**
+
+```xml
+轴::节点测试[限定谓语]      eg：
+child::id[text()=100]
+```
+
+**轴      ：**用与定义**当前节点**和**所选节点**的关系
+
+**节点测试 ：**用与指定**轴内部**的部分节点。
+
+**限定谓语 ：**0个1个或者1个以上的**判断语句**。使用专用的表达式对轴和节点测试性匹配的节点做进一步限定。
+
+```xml
+<xsl:tmplate math="/root" />     当前节点设置为root即self轴
+
+<xsl:value-of select="Xpath路径"/>  显示XPath搜索到的结点集。
+```
 
 #### 1.2 **路径表达式**
 

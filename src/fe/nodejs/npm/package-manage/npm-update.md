@@ -1,0 +1,312 @@
+---
+title: npm update
+article: false
+order: 3
+---
+
+## 概要
+
+```bash
+npm update [<pkg>...]
+aliases: up, upgrade, udpate
+```
+
+## 描述
+
+此命令会将列出的所有包更新到最新版本（由 `tag` 配置指定），同时尊重包及其依赖的 semver 约束（如果它们也需要相同的包）。
+
+它还将安装缺少的包。
+
+如果指定了 `-g` 标志，此命令将更新全局安装的包。
+
+如果未指定包名称，则将更新指定位置（全局或本地）中的所有包。
+
+请注意，默认情况下 `npm update` 不会更新项目 `package.json` 中直接依赖的 semver 值。如果你还想更新 `package.json` 中的值，你可以运行：`npm update --save`（或将 `save=true` 选项添加到 配置文件 以使其成为默认行为）。
+
+## 示例
+
+对于下面的示例，假设当前包是 `app`，它依赖于依赖 `dep1`（`dep2`、.. 等）。`dep1` 的已发布版本是：
+
+```json
+{
+  "dist-tags": { "latest": "1.2.2" },
+  "versions": [
+    "1.2.2",
+    "1.2.1",
+    "1.2.0",
+    "1.1.2",
+    "1.1.1",
+    "1.0.0",
+    "0.4.1",
+    "0.4.0",
+    "0.2.0"
+  ]
+}
+```
+
+### 插入符号依赖
+
+如果 `app` 的 `package.json` 包含：
+
+```json
+"dependencies": {
+  "dep1": "^1.1.1"
+}
+```
+
+那么 `npm update` 会安装 `dep1@1.2.2`，因为 `1.2.2` 就是 `latest`，`1.2.2` 满足 `^1.1.1`。
+
+### 波浪号依赖
+
+但是，如果 `app` 的 `package.json` 包含：
+
+```json
+"dependencies": {
+  "dep1": "~1.1.1"
+}
+```
+
+在这种情况下，运行 `npm update` 将安装 `dep1@1.1.2`。尽管 `latest` 标签指向 `1.2.2`，但这个版本不满足 `~1.1.1`，相当于 `>=1.1.1 <1.2.0`。所以使用满足 `~1.1.1` 的最高排序版本，即 `1.1.2`。
+
+### 低于 1.0.0 的插入符号依赖
+
+假设 `app` 对低于 `1.0.0` 的版本有插入符号依赖，例如：
+
+```json
+"dependencies": {
+  "dep1": "^0.2.0"
+}
+```
+
+`npm update` 将安装 `dep1@0.2.0`。
+
+如果依赖于 `^0.4.0`：
+
+```json
+"dependencies": {
+  "dep1": "^0.4.0"
+}
+```
+
+那么 `npm update` 会安装 `dep1@0.4.1`，因为那是满足 `^0.4.0`（`>= 0.4.0 <0.5.0`）的最高排序版本
+
+### 子依赖
+
+假设你的应用现在也依赖于 `dep2`
+
+```json
+{
+  "name": "my-app",
+  "dependencies": {
+    "dep1": "^1.0.0",
+    "dep2": "1.0.0"
+  }
+}
+```
+
+而 `dep2` 本身就依赖于 `dep1` 的这个有限范围
+
+```json
+{
+  "name": "dep2",
+  "dependencies": {
+    "dep1": "~1.1.1"
+  }
+}
+```
+
+然后 `npm update` 将安装 `dep1@1.1.2`，因为这是 `dep2` 允许的最高版本。当单个版本可以满足树中多个依赖的 semver 要求时，npm 将优先在树中拥有单个版本的 `dep1`，而不是两个。在这种情况下，如果你确实需要你的包来使用更新的版本，你需要使用 `npm install`。
+
+### 更新全局安装的包
+
+`npm update -g` 将对每个全局安装的 `outdated` 包应用 `update` 操作 - 也就是说，具有与 `wanted` 不同的版本。
+
+注意：全局安装的包被视为安装时指定了插入符号 semver 范围。因此，如果你需要更新到 `latest`，你可能需要运行 `npm install -g [<pkg>...]`
+
+注意：如果包已升级到比 `latest` 更新的版本，它将被降级。
+
+## 配置
+
+### `save`
+
+- 默认值：`true` 除非在使用 `npm update` 时默认为 `false`
+- 类型：布尔值
+
+将已安装的包作为依赖保存到 `package.json` 文件中。
+
+与 `npm rm` 命令一起使用时，从 `package.json` 中删除依赖。
+
+如果设置为 `false`，也会阻止写入 `package-lock.json`。
+
+### `global`
+
+- 默认值：false
+- 类型：布尔值
+
+在 "global" 模式下运行，以便将包安装到 `prefix` 文件夹而不是当前工作目录。有关行为差异的更多信息，请参见 [文件夹](https://npm.nodejs.cn/cli/v11/configuring-npm/folders)。
+
+- 包安装到 `{prefix}/lib/node_modules` 文件夹，而不是当前工作目录。
+- bin 文件链接到 `{prefix}/bin`
+- 手册页链接到 `{prefix}/share/man`
+
+### `install-strategy`
+
+- 默认值："hoisted"
+- 类型："hoisted"、"nested"、"shallow" 或 "linked"
+
+设置在 node_modules 中安装包的策略。提升（默认）：在顶层安装非复制，并在目录结构中根据需要复制。nested:（以前的 --legacy-bundling）就地安装，无需提升。浅层（以前的 --global-style）只在顶层安装直接的 deps。linked:（实验）安装在 node_modules/.store 中，链接到位，未提升。
+
+### `legacy-bundling`
+
+- 默认值：false
+- 类型：布尔值
+- DEPRECATED:此选项已被 `--install-strategy=nested` 弃用
+
+不要在 `node_modules` 中提升包安装，而是以与它们所依赖的方式相同的方式安装包。这可能会导致非常深的目录结构和重复的软件包安装，因为没有数据去重。设置 `--install-strategy=nested`。
+
+### `global-style`
+
+- 默认值：false
+- 类型：布尔值
+- DEPRECATED:此选项已被 `--install-strategy=shallow` 弃用
+
+仅在顶层 `node_modules` 中安装直接依赖，但提升更深层次的依赖。设置 `--install-strategy=shallow`。
+
+### `omit`
+
+- 默认值：'dev' 如果 `NODE_ENV` 环境变量设置为 'production'，否则为空。
+- 类型："dev"、"optional"、"peer"（可多次设置）
+
+要从磁盘上的安装树中省略的依赖类型。
+
+请注意，这些依赖仍会被解析并添加到 `package-lock.json` 或 `npm-shrinkwrap.json` 文件中。它们只是没有物理安装在磁盘上。
+
+如果一个包类型同时出现在 `--include` 和 `--omit` 列表中，那么它将被包括在内。
+
+如果生成的省略列表包含 `'dev'`，则 `NODE_ENV` 环境变量将针对所有生命周期脚本设置为 `'production'`。
+
+### `include`
+
+- 默认值：
+- 类型："prod"、"dev"、"optional"、"peer"（可多次设置）
+
+允许定义要安装的依赖类型的选项。
+
+这是 `--omit=<type>` 的倒数。
+
+`--include` 中指定的依赖类型将不会被忽略，无论命令行中指定省略/包含的顺序如何。
+
+### `strict-peer-deps`
+
+- 默认值：false
+- 类型：布尔值
+
+如果设置为 `true`，而 `--legacy-peer-deps` 没有设置，那么任何冲突的 `peerDependencies` 都将被视为安装失败，即使 npm 可以根据非对等依赖合理地猜测出适当的解决方案。
+
+默认情况下，依赖图中的冲突 `peerDependencies` 将使用最近的非对等依赖规范来解决，即使这样做会导致某些包收到超出其包的 `peerDependencies` 对象中设置的范围的对等依赖。
+
+当执行这样的覆盖时，会打印一条警告，解释冲突和涉及的包。如果设置了 `--strict-peer-deps`，则此警告被视为失败。
+
+### `package-lock`
+
+- 默认值：true
+- 类型：布尔值
+
+如果设置为 false，则安装时忽略 `package-lock.json` 文件。如果 `save` 为真，这也将阻止写入 `package-lock.json`。
+
+### `foreground-scripts`
+
+- 默认值：`false` 除非使用 `npm pack` 或 `npm publish` 时默认为 `true`
+- 类型：布尔值
+
+在前台进程中运行已安装包的所有构建脚本（即 `preinstall`、`install` 和 `postinstall`）脚本，与主 npm 进程共享标准输入、输出和错误。
+
+请注意，这通常会使安装运行速度变慢，并且噪音更大，但对调试很有用。
+
+### `ignore-scripts`
+
+- 默认值：false
+- 类型：布尔值
+
+如果为 true，npm 不会运行 package.json 文件中指定的脚本。
+
+请注意，如果设置了 `ignore-scripts`，则明确旨在运行特定脚本的命令（例如 `npm start`、`npm stop`、`npm restart`、`npm test` 和 `npm run-script`）仍将运行其预期的脚本，但它们不会运行任何前置或后置脚本。
+
+### `audit`
+
+- 默认值：true
+- 类型：布尔值
+
+当 "true" 将审计报告与当前 npm 命令一起提交到默认注册表和为范围配置的所有注册表时。有关提交内容的详细信息，请参阅 [`npm audit`](https://npm.nodejs.cn/cli/v11/commands/npm-audit) 的文档。
+
+### `bin-links`
+
+- 类型：布尔值
+
+告诉 npm 为包的可执行文件创建符号链接（或 Windows 上的 `.cmd` 垫片）。
+
+设置为 false 使其不执行此操作。这可以用来解决某些文件系统不支持符号链接的事实，即使在表面上是 Unix 系统上也是如此。
+
+### `fund`
+
+- 默认值：true
+- 类型：布尔值
+
+当 "true" 在每个 `npm install` 的末尾显示消息时，确认正在寻找资金的依赖的数量。详见 [`npm fund`](https://npm.nodejs.cn/cli/v11/commands/npm-fund)。
+
+### `dry-run`
+
+- 默认值：false
+- 类型：布尔值
+
+表示你不希望 npm 进行任何更改，并且它应该只报告它会做的事情。这可以传递到任何修改本地安装的命令中，例如 `install`、`update`、`dedupe`、`uninstall` 以及 `pack` 和 `publish`。
+
+注意：其他网络相关命令不支持此功能，例如 `dist-tags`、`owner` 等。
+
+### `workspace`
+
+- 默认值：
+- 类型：字符串（可以设置多次）
+
+启用在当前项目的已配置工作区的上下文中运行命令，同时通过仅运行此配置选项定义的工作区进行过滤。
+
+`workspace` 配置的有效值为：
+
+- 工作区名称
+- 工作区目录的路径
+- 父工作区目录的路径（将导致选择该文件夹中的所有工作区）
+
+为 `npm init` 命令设置时，可以将其设置为尚不存在的工作区的文件夹，以创建文件夹并将其设置为项目中的全新工作区。
+
+此值不会导出到子进程的环境中。
+
+### `workspaces`
+
+- 默认值：null
+- 类型：空值或布尔值
+
+设置为 true 可在所有已配置工作区的上下文中运行该命令。
+
+显式将此设置为 false 将导致像 `install` 这样的命令完全忽略工作区。未明确设置时：
+
+- 在 `node_modules` 树上运行的命令（安装、更新等）会将工作区链接到 `node_modules` 文件夹。* 执行其他操作（测试、执行、发布等）的命令将在根项目上运行，除非在 `workspace` 配置中指定了一个或多个工作区。
+
+此值不会导出到子进程的环境中。
+
+### `include-workspace-root`
+
+- 默认值：false
+- 类型：布尔值
+
+为命令启用工作区时包括工作区根。
+
+当为 false 时，通过 `workspace` 配置指定单个工作区，或通过 `workspaces` 标志指定所有工作区，将导致 npm 仅在指定的工作区上运行，而不是在根项目上运行。
+
+此值不会导出到子进程的环境中。
+
+### `install-links`
+
+- 默认值：false
+- 类型：布尔值
+
+设置文件时：协议依赖将作为常规依赖打包和安装，而不是创建符号链接。此选项对工作区没有影响。

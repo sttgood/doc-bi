@@ -86,6 +86,10 @@ export const zhNavbar = navbar([
           {
             text:"MarkDown",
             link:"/fe/markdown/",
+          },
+          {
+            text:"NPM",
+            link:"https://npm.nodejs.cn/"
           }
         ],
       },
@@ -148,6 +152,14 @@ export const zhNavbar = navbar([
       {
         text:"文心一言",
         link:"https://yiyan.baidu.com/",
+      },
+      {
+        text:"豆包",
+        link:"https://www.doubao.com/chat/",
+      },
+      {
+        text:"deepseek",
+        link:"https://chat.deepseek.com/",
       }
     ],
   },

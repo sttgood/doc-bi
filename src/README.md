@@ -38,10 +38,10 @@ highlights:
         details: XML、JSON、YAML
         link: /fe/serialize/
         
-      - title: 后端
+      - title: SHELL
         icon: 
-        details: 后端知识和整理
-        link: 
+        details: node、命令
+        link: /fe/nodejs/
 
       - title: Markdown
         icon: 
@@ -53,10 +53,10 @@ highlights:
         details: 各种信息趋势的展示和分析
         link: /info
 
-      - title: 知识点
+      - title: Linux
         icon: box-archive
         details: 知识点的整理和总结
-        link: ""
+        link: /be/linux/
 
       - title: 收集
         icon: box-archive

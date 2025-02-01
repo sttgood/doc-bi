@@ -50,6 +50,10 @@ export default hopeTheme({
     
     highlighter: {
       type: "shiki", 
+      themes: {
+      dark: "dark-plus",
+      light:  "light-plus"
+      }
     },
     align: true,
     alert: true,

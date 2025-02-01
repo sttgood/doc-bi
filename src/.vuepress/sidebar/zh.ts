@@ -105,50 +105,39 @@ export const zhSidebar = sidebar({
     },
   ],
   "/fe/preprocess/": "structure",
-  // [
-  //   {
-  //     text: "TypeScript",
-  //     link: "typescript/",
-  //   },
-  //   {
-  //     text: "Less",
-  //     link: "less/",
-  //   },
-  //   {
-  //     text: "Scss",
-  //     link: "scss/",
-  //   },
-  // ],
   "/fe/html/": "structure",
   "/fe/markdown/": "structure",
   "/fe/regexp/": "structure",
   "/fe/serialize/": "structure",
   "/fe/xml/": "structure",
+  "/fe/nodejs/": "structure",
 
   "/fe/js/": "structure",
-  "/be/": [
-    {
-      text: "Java基础",
-      prefix: "java/",
-      link: "java/",
-      children: [
-        {
-          text: "java",
-          link: "",
-          activeMatch: "/fe/preprocess/typescript",
-        },
-        {
-          text: "Less",
-          link: "less",
-          activeMatch: "/fe/preprocess/less",
-        },
-        {
-          text: "Scss",
-          link: "scss",
-          activeMatch: "/fe/preprocess/scss",
-        },
-      ],
-    },
-    "slides",
-  ],
+  "/be/linux/": "structure",
+
+  // "/be/": [
+  //   {
+  //     text: "Java基础",
+  //     prefix: "java/",
+  //     link: "java/",
+  //     children: [
+  //       {
+  //         text: "java",
+  //         link: "",
+  //         activeMatch: "/fe/preprocess/typescript",
+  //       },
+  //       {
+  //         text: "Less",
+  //         link: "less",
+  //         activeMatch: "/fe/preprocess/less",
+  //       },
+  //       {
+  //         text: "Scss",
+  //         link: "scss",
+  //         activeMatch: "/fe/preprocess/scss",
+  //       },
+  //     ],
+  //   },
+  //   "slides",
+  // ],
 });
