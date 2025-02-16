@@ -1,9 +1,11 @@
 ---
 title: Promise案例
 category: 
+  - javascript
+tag:
   - Promise
   - 异步
-date: 2023-9-31 9:58:00
+date: 2025-2-5 15:00:00
 article: true
 timeline: true
 ---

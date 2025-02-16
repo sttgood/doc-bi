@@ -1,8 +1,12 @@
 ---
-title: Promise案例
-category: 
+title: Promise案例-读文件取
+category:
+  - javascript
+tag: 
   - Promise
   - 异步
+date: 2025-2-5 15:00:00
+timeline: true
 ---
 Promise案例：读取文件
 <!-- more -->

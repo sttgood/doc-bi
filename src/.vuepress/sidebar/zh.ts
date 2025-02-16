@@ -104,6 +104,7 @@ export const zhSidebar = sidebar({
       ],
     },
   ],
+  "/professional-knowledge/computer-network": "structure",
   "/fe/preprocess/": "structure",
   "/fe/html/": "structure",
   "/fe/markdown/": "structure",
@@ -114,30 +115,6 @@ export const zhSidebar = sidebar({
 
   "/fe/js/": "structure",
   "/be/linux/": "structure",
+  "/language/python/": "structure",
 
-  // "/be/": [
-  //   {
-  //     text: "Java基础",
-  //     prefix: "java/",
-  //     link: "java/",
-  //     children: [
-  //       {
-  //         text: "java",
-  //         link: "",
-  //         activeMatch: "/fe/preprocess/typescript",
-  //       },
-  //       {
-  //         text: "Less",
-  //         link: "less",
-  //         activeMatch: "/fe/preprocess/less",
-  //       },
-  //       {
-  //         text: "Scss",
-  //         link: "scss",
-  //         activeMatch: "/fe/preprocess/scss",
-  //       },
-  //     ],
-  //   },
-  //   "slides",
-  // ],
 });

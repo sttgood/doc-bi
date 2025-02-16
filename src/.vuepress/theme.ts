@@ -69,6 +69,7 @@ export default hopeTheme({
     mark: true,
     plantuml: true,
     spoiler: true,
+    mermaid: true,
     stylize: [
       {
         matcher: "Recommended",

@@ -4,8 +4,6 @@ article: false
 order: 2
 ---
 
-[[toc]]
-
 ### 贪婪模式（Greedy）
 
 #### 特点：
