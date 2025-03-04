@@ -2,6 +2,8 @@
 title: json
 article: false
 index: false
+dir:
+  link: true
 ---
 **JSON**
 JSON（JavaScript Object Notation）是一种轻量级的数据交换格式，易于人类阅读和编写，同时也便于机器解析和生成。它基于ECMAScript的一个子集设计，成为了一种开放标准的文件格式和数据交换格式1。JSON独立于语言设计，很多编程语言都支持JSON格式的数据交换，使其成为现代Web开发中不可或缺的一部分。

@@ -4,127 +4,183 @@ article: false
 index: false
 ---
 
-
-
-以下是JavaScript完整知识目录的结构化整理，涵盖基础到高级的核心内容，按学习路径划分为10个模块：
+以下是一份系统学习JavaScript的大纲，涵盖从基础到进阶的核心知识点，适合分阶段学习：
 
 ---
 
-一、基础语法与核心概念
+### **第一阶段：JavaScript基础语法**
+1. **JavaScript简介**
+   - JavaScript的历史与作用（浏览器端 vs 服务器端）
+   - 开发环境搭建（浏览器控制台、Node.js、VS Code）
+   - 第一个JavaScript程序（HTML嵌入方式、外部脚本）
 
-1. 变量与数据类型  
-   - `var`/`let`/`const`声明  
-   - 原始类型（String、Number、Boolean等）与引用类型（Object）
-2. 运算符与表达式  
-   - 算术/比较/逻辑运算符、类型转换规则
-3. 流程控制  
-   - 条件语句（if-else、switch）、循环（for、while）
+2. **变量与数据类型**
+   - 变量声明：`var`、`let`、`const`
+   - 基本数据类型：`number`、`string`、`boolean`、`null`、`undefined`、`symbol`
+   - 引用数据类型：`object`（对象、数组、函数）
+   - 类型检测与转换：`typeof`、`instanceof`、显式/隐式转换
 
----
+3. **运算符与表达式**
+   - 算术运算符、比较运算符、逻辑运算符
+   - 赋值运算符、三元运算符
+   - 运算符优先级
 
-二、函数与作用域
-
-1. 函数定义与调用  
-   - 函数声明 vs 函数表达式、箭头函数
-2. 作用域与闭包  
-   - 词法作用域、作用域链、闭包原理
-3. 高阶函数  
-   - 回调函数、函数柯里化、函数组合
-
----
-
-三、对象与原型链
-
-1. 对象操作  
-   - 属性描述符（getter/setter）、对象冻结方法
-2. 原型继承  
-   - `prototype`、`__proto__`、`new`关键字实现机制
-3. Class语法  
-   - ES6类定义、静态方法、继承（extends/super）
+4. **流程控制**
+   - 条件语句：`if-else`、`switch-case`
+   - 循环语句：`for`、`while`、`do-while`
+   - 循环控制：`break`、`continue`、`label`
 
 ---
 
-四、DOM与BOM操作
+### **第二阶段：函数与作用域**
+1. **函数基础**
+   - 函数声明与表达式
+   - 参数传递（默认参数、剩余参数）
+   - 返回值与`return`语句
 
-1. DOM树操作  
-   - 节点查询、元素增删改、样式操作
-2. 事件机制  
-   - 事件冒泡/捕获、事件委托、自定义事件
-3. BOM对象  
-   - Window、Location、History、定时器API
+2. **作用域与闭包**
+   - 全局作用域、函数作用域、块级作用域（`let`/`const`）
+   - 变量提升（Hoisting）与暂时性死区（TDZ）
+   - 闭包原理与应用场景
+   - 立即执行函数（IIFE）
 
----
-
-五、异步编程
-
-1. 异步模型  
-   - Event Loop原理、宏任务与微任务
-2. 异步处理方案  
-   - 回调函数 → Promise → async/await演进
-3. 高级应用  
-   - Web Workers、Promise.allSettled()等API
+3. **高阶函数**
+   - 函数作为参数（回调函数）
+   - 函数作为返回值
+   - 柯里化（Currying）与函数组合
 
 ---
 
-六、ES6+新特性
+### **第三阶段：对象与数组**
+1. **对象（Object）**
+   - 对象字面量语法
+   - 属性访问（点操作符 vs 方括号）
+   - 方法定义与`this`关键字
+   - 对象遍历：`for...in`、`Object.keys()`
 
-1. 语法增强  
-   - 解构赋值、模板字符串、可选链操作符（?.）
-2. 数据结构  
-   - Map/Set、Symbol类型、TypedArray
-3. 模块化  
-   - ES Module语法、动态导入（import()）
+2. **数组（Array）**
+   - 数组的创建与操作（增删改查）
+   - 数组方法：`push`/`pop`、`shift`/`unshift`、`slice`/`splice`
+   - 高阶数组方法：`map`、`filter`、`reduce`、`forEach`
+   - 数组排序与去重
 
----
-
-七、前端工程化
-
-1. 模块打包工具  
-   - Webpack配置、Tree Shaking、Code Splitting
-2. 代码规范  
-   - ESLint配置、Prettier格式化、Husky钩子
-3. 包管理  
-   - npm/yarn/pnpm对比、workspace管理
+3. **内置对象**
+   - `Math`、`Date`、`JSON`
+   - `String`与正则表达式（RegExp）
+   - `Set`与`Map`（ES6+）
 
 ---
 
-八、框架生态
+### **第四阶段：DOM与事件**
+1. **DOM操作**
+   - DOM树结构与节点类型
+   - 元素选择：`querySelector`、`getElementById`等
+   - 元素属性与内容操作（`innerHTML`、`textContent`）
+   - 动态创建、删除、修改节点
 
-1. React技术栈  
-   - Hooks原理、虚拟DOM、Redux状态管理
-2. Vue技术栈  
-   - 响应式原理、Composition API、Vue Router
-3. 构建工具链  
-   - Vite、Next.js/Nuxt.js框架特性
-
----
-
-九、Node.js开发
-
-1. 核心模块  
-   - fs/path/http模块应用场景
-2. 服务端开发  
-   - Express/Koa中间件机制、RESTful API设计
-3. 性能优化  
-   - 集群模式（Cluster）、流式数据处理
+2. **事件处理**
+   - 事件流（冒泡与捕获）
+   - 事件监听：`addEventListener`
+   - 事件对象（`event`）与事件委托
+   - 常见事件类型：点击、键盘、表单、鼠标事件
 
 ---
 
-十、高级进阶
+### **第五阶段：异步编程**
+1. **异步基础**
+   - 同步 vs 异步
+   - 回调函数（Callback）与回调地狱
+   - `setTimeout`、`setInterval`
 
-1. 设计模式  
-   - 观察者模式、工厂模式、代理模式实现
-2. 性能优化  
-   - 内存泄漏排查、Web Vitals指标优化
-3. 安全防护  
-   - XSS/CSRF防御、CSP策略配置
+2. **Promise**
+   - Promise状态（pending、fulfilled、rejected）
+   - `then`、`catch`、`finally`
+   - `Promise.all`、`Promise.race`
+
+3. **Async/Await**
+   - 异步函数声明与使用
+   - 错误处理（`try...catch`）
 
 ---
 
-学习资源推荐
+### **第六阶段：ES6+新特性**
+1. **语法增强**
+   - 箭头函数（Arrow Function）
+   - 模板字符串（Template Literals）
+   - 解构赋值（数组、对象）
+   - 扩展运算符（`...`）
 
-- 书籍：《JavaScript高级程序设计》《你不知道的JavaScript》
-- 文档：、
-- 实战：LeetCode算法练习、开源项目贡献
+2. **模块化**
+   - `import`与`export`语法
+   - 模块加载机制（ES Modules vs CommonJS）
 
-本目录遵循渐进式学习路径，建议配合项目实践（如搭建SPA应用、开发CLI工具）深化理解，可覆盖前端/全栈工程师95%以上的技术需求。
+3. **其他特性**
+   - 类（`class`）与继承（`extends`）
+   - 生成器（Generator）与迭代器（Iterator）
+   - Proxy与Reflect
+
+---
+
+### **第七阶段：面向对象与原型链**
+1. **原型与继承**
+   - 构造函数与`new`关键字
+   - 原型链与`prototype`属性
+   - `Object.create`与继承实现
+   - ES6类的底层原理
+
+2. **设计模式**
+   - 工厂模式、构造函数模式
+   - 单例模式、观察者模式
+
+---
+
+### **第八阶段：进阶主题**
+1. **错误处理与调试**
+   - `try...catch`与错误对象
+   - 调试工具（Chrome DevTools）
+
+2. **客户端存储**
+   - `Cookie`、`localStorage`、`sessionStorage`
+   - IndexedDB基础
+
+3. **网络请求**
+   - `XMLHttpRequest`（XHR）
+   - `Fetch API`与`Axios`
+   - WebSocket基础
+
+4. **模块化与工程化**
+   - Webpack基础配置
+   - Babel转译与Polyfill
+
+---
+
+### **第九阶段：Node.js基础**
+1. **Node.js入门**
+   - 模块系统（CommonJS）
+   - 文件操作（`fs`模块）
+   - HTTP服务器（`http`模块）
+
+---
+
+### **第十阶段：实战与工具**
+1. **测试与调试**
+   - 单元测试（Jest/Mocha）
+   - 性能优化与内存泄漏排查
+
+2. **项目实战**
+   - Todo List应用（综合DOM与状态管理）
+   - 天气查询应用（API调用）
+   - 简单SPA（路由与组件化）
+   - 小游戏（如贪吃蛇、井字棋）
+
+---
+
+### **学习资源推荐**
+- **书籍**：《JavaScript高级程序设计》《你不知道的JavaScript》《ES6标准入门》
+- **在线课程**：MDN Web Docs、freeCodeCamp、Codecademy
+- **工具链**：VS Code、Git、Postman、Chrome DevTools
+- **社区**：Stack Overflow、GitHub、掘金、知乎
+
+---
+
+通过这个大纲，你可以逐步掌握JavaScript的核心概念，最终能够独立开发完整的Web应用。建议每个阶段配合实践练习（如LeetCode、Codewars）和项目实战巩固知识。

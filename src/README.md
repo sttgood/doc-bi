@@ -72,6 +72,11 @@ highlights:
         icon: table-columns
         details: 日常记录
         link: /personal/
+
+      - title: 图表
+        icon: table-columns
+        details: 常用图表工具mermaid、echarts等
+        link: /fe/diagrams/
         
 footer: true
 ---

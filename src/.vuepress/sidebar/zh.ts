@@ -112,9 +112,11 @@ export const zhSidebar = sidebar({
   "/fe/serialize/": "structure",
   "/fe/xml/": "structure",
   "/fe/nodejs/": "structure",
+  "/fe/diagrams/": "structure",
 
   "/fe/js/": "structure",
   "/be/linux/": "structure",
   "/language/python/": "structure",
+  
 
 });

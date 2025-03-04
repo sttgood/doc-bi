@@ -47,7 +47,6 @@ export default hopeTheme({
 
   headerDepth: 4,
   markdown: {
-    
     highlighter: {
       type: "shiki", 
       themes: {
@@ -88,41 +87,6 @@ export default hopeTheme({
     tabs: true,
     tasklist: true,
     vPre: true,
-
-    // uncomment these if you need TeX support
-    // math: {
-    //   // install katex before enabling it
-    //   type: "katex",
-    //   // or install mathjax-full before enabling it
-    //   type: "mathjax",
-    // },
-
-    // install chart.js before enabling it
-    // chartjs: true,
-
-    // install echarts before enabling it
-    // echarts: true,
-
-    // install flowchart.ts before enabling it
-    // flowchart: true,
-
-    // install mermaid before enabling it
-    // mermaid: true,
-
-    // playground: {
-    //   presets: ["ts", "vue"],
-    // },
-
-    // install @vue/repl before enabling it
-    // vuePlayground: true,
-
-    // install sandpack-vue3 before enabling it
-    // sandpack: true,
-
-    // install @vuepress/plugin-revealjs and uncomment these if you need slides
-    // revealjs: {
-    //   plugins: ["highlight", "math", "search", "notes", "zoom"],
-    // },
   },
   plugins: {
     // Note: This is for testing ONLY!
@@ -170,6 +134,7 @@ export default hopeTheme({
         "Badge",
       ],
     },
+  
     // You should generate and use your own comment service
     // install vuepress-plugin-pwa2 and uncomment these if you want a PWA
     // pwa: {

@@ -1,6 +1,6 @@
-// $theme-color: #cc9900;
-// 文字
+// 文字z
 // $vp-c-text：默认文本颜色。
+
 
 // 默认情况下，主题会根据 $vp-c-text 自动生成以下颜色，但你仍然可以自定义它们：
 
@@ -8,7 +8,8 @@
 // $vp-c-text-subtle：用于细微文本的颜色，例如“占位符”或“插入符号”。
 // 背景
 // $vp-c-bg：用于主屏幕的背景颜色。
-// $vp-c-bg-alt：用于“侧边栏”或“代码块”等地方的备用背景颜色。
+// $vp-c-bg-alt：用于“侧边栏”或“代码块”等地方的备用背景颜色。 
+   
 // $vp-c-bg-elv：用于“浮动”部分的提升背景颜色，例如“对话框”。
 // 阴影
 // $vp-c-shadow：阴影颜色
@@ -18,12 +19,13 @@
 // 默认情况下，主题会根据配置文件中的 $theme-color 自动生成以下强调颜色，但你仍然可以自定义它们：
 
 // $vp-c-accent：主要用于彩色文本的最实色。它必须满足与放在 $vp-c-accent-soft 顶部时的对比度。
-
+ 
 // $vp-c-accent-hover：用于悬停状态的颜色。
-// $vp-c-accent-hover:#999966;
+    
+   //$vp-c-accent-hover:#999966;
 
 // $vp-c-accent-bg：用于实色背景的颜色。它必须满足与放在其顶部的 $vp-c-accent-text 的对比度。
-// $vp-c-accent-bg:hsl(167, 62%, 26%);
+   $vp-c-accent-bg: rgb(210, 226, 209);
 
 // $vp-c-accent-text：用于 $vp-c-accent-bg 背景的文本颜色。它必须满足与 $vp-c-accent-bg 的对比度。
 
@@ -34,7 +36,13 @@
 
 // 边框
 // $vp-c-border：交互组件的边框颜色。例如，这应该用于按钮轮廓。
+   $vp-c-border: (
+      light: white,
+      dark: #1B1B1F
+   );
+// $vp-c-border-hover：用于悬停状态的边框颜色。
 // $vp-c-divider：分隔符的颜色，用于在同一组件内分隔部分，例如在“h2”标题上放置分隔符。
+  
 // 默认情况下，主题会根据 $vp-c-border 自动生成以下颜色，但你仍然可以自定义它们：
 
 // $vp-c-border-hard：较暗的边框颜色，用于紧贴文本的“硬”边框，例如表格和 kbd。
@@ -71,6 +79,7 @@
 // 可用的字体变量:
 
 // $vp-font: 正常文本的字体系列
+   $vp-font: '"Microsoft Yahei", Georgia, -apple-system, "Nimbus Roman No9 L", "PingFang SC", "Hiragino Sans GB", "Noto Serif SC","WenQuanYi Micro Hei", "ST Heiti", sans-serif';
 // $vp-font-heading: 标题元素的字体系列
 // $vp-font-mono: 代码块的字体系列
 
