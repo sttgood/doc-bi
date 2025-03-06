@@ -1,0 +1,20 @@
+.vp-feature-header, .vp-highlight-header {
+  font-size: 1.5rem;
+}
+
+.vp-feature-title {
+  font-size: 1rem;
+}
+
+.vp-feature-details {
+  font-size: 1rem;
+  color: gray;
+}
+
+.vp-heightlight-title, .vp-heightlight-detail {
+  font-size: 1rem;
+}
+
+.vp-sidebar-title {
+  font-weight: bold;
+}/*# sourceMappingURL=index.css.map */

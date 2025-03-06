@@ -113,7 +113,7 @@ export const zhSidebar = sidebar({
   "/fe/xml/": "structure",
   "/fe/nodejs/": "structure",
   "/fe/diagrams/": "structure",
-
+  "/fe/css/": "structure",
   "/fe/js/": "structure",
   "/be/linux/": "structure",
   "/language/python/": "structure",

@@ -1,7 +1,7 @@
 ---
 title: 节点形状
 article: false
-order: 2
+order: 1
 ---
 
 ### 基本形状
@@ -15,7 +15,7 @@ order: 2
 ```mermaid
 ---
 config:
-    theme: forest
+    theme: dark
 ---
 flowchart LR
     id1(括号表示圆角矩形)

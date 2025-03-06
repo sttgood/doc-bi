@@ -4,6 +4,7 @@ import { enSidebar, zhSidebar } from "./sidebar/index.js";
 
 export default hopeTheme({
   hostname: "the githuppages",
+
   author: {
     name: "stt",
     url: "",
@@ -12,6 +13,7 @@ export default hopeTheme({
   logo: "/assets/image/stt-black.png",
   //repo: "vuepress-theme-hope/vuepress-theme-hope",
   docsDir: "src",
+
   locales: {
     "/": {
       navbar: zhNavbar,

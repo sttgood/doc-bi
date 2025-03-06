@@ -1200,7 +1200,7 @@ sequenceDiagram
 | text.actor     | 所有角色的文本样式。          |
 | text.actor-box | 角色框的文本样式。            |
 | text.actor-man | 角色人物的文本样式。          |
-| 角色线         | 角色的垂直线。                |
+| actor-line     | 角色的垂直线。                |
 | messageLine0   | 实心消息行的样式。            |
 | messageLine1   | 虚线消息行的样式。            |
 | messageText    | 定义消息箭头上的文本样式。    |
@@ -1312,17 +1312,17 @@ mermaid.sequenceConfig = {
 
 可能的配置参数：
 
-| 参数              | 描述                                                         | 默认值                      |
-| :---------------- | :----------------------------------------------------------- | :-------------------------- |
-| mirrorActors      | 打开/关闭图表下方和上方参与者的渲染                          | false                       |
-| 底部边距调整      | 调整图表结束的距离。使用 css 的宽边框样式可能会产生不需要的剪裁，这就是此配置参数存在的原因。 | 1                           |
-| 角色字体大小      | 设置角色描述的字体大小                                       | 14                          |
-| 角色字体家族      | 设置角色描述的字体系列                                       | "打开无字体"，无衬线字体    |
-| 角色字体粗细      | 设置角色描述的字体粗细                                       | "打开无字体"，无衬线字体    |
-| noteFontSize      | 设置角色附加注释的字体大小                                   | 14                          |
-| noteFontFamily    | 设置角色附加注释的字体系列                                   | "投石机女士"、verdana、宋体 |
-| noteFontWeight    | 设置角色附加注释的字体粗细                                   | "投石机女士"、verdana、宋体 |
-| noteAlign         | 设置角色附加注释中文本的文本对齐方式                         | center                      |
-| messageFontSize   | 设置角色<->角色消息的字体大小                                | 16                          |
-| messageFontFamily | 设置 actor<->actor 消息的字体系列                            | "投石机女士"、verdana、宋体 |
-| messageFontWeight | 设置角色<->角色消息的字体粗细                                | "投石机女士"、verdana、宋体 |
+| 参数              | 描述                                                         | 默认值                         |
+| :---------------- | :----------------------------------------------------------- | :----------------------------- |
+| mirrorActors      | 打开/关闭图表下方和上方参与者的渲染                          | false                          |
+| bottomMarginAdj   | 调整图表结束的距离。使用 css 的宽边框样式可能会产生不需要的剪裁，这就是此配置参数存在的原因。 | 1                              |
+| actorFontSize     | 设置角色描述的字体大小                                       | 14                             |
+| autoFontFamily    | 设置角色描述的字体系列                                       | "Open Sans", sans-serif        |
+| ActorFontWeight   | 设置角色描述的字体粗细                                       | "Open Sans", sans-serif        |
+| noteFontSize      | 设置角色附加注释的字体大小                                   | 14                             |
+| noteFontFamily    | 设置角色附加注释的字体系列                                   | "trebuchet ms", verdana, arial |
+| noteFontWeight    | 设置角色附加注释的字体粗细                                   | "trebuchet ms", verdana, arial |
+| noteAlign         | 设置角色附加注释中文本的文本对齐方式                         | center                         |
+| messageFontSize   | 设置角色<->角色消息的字体大小                                | 16                             |
+| messageFontFamily | 设置 actor<->actor 消息的字体系列                            | "trebuchet ms", verdana, arial |
+| messageFontWeight | 设置角色<->角色消息的字体粗细                                | "trebuchet ms", verdana, arial |

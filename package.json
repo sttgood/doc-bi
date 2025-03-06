@@ -13,7 +13,7 @@
   "devDependencies": {
     "@vue/repl": "^4.5.1",
     "@vuepress/bundler-vite": "2.0.0-rc.20",
-    "@vuepress/plugin-shiki": "2.0.0-rc.80",
+    "@vuepress/plugin-shiki": "2.0.0-rc.82",
     "chart.js": "^4.4.8",
     "echarts": "^5.6.0",
     "flowchart.ts": "^3.0.1",
@@ -29,8 +29,9 @@
     "vidstack": "^1.12.13",
     "vue": "^3.5.13",
     "vuepress": "2.0.0-rc.20",
-    "vuepress-plugin-components": "2.0.0-rc.72",
-    "vuepress-theme-hope": "2.0.0-rc.73"
+    "vuepress-plugin-components": "2.0.0-rc.74",
+    "vuepress-plugin-md-enhance": "2.0.0-rc.74",
+    "vuepress-theme-hope": "2.0.0-rc.74"
   },
   "dependencies": {
     "@jridgewell/sourcemap-codec": "^1.5.0",
@@ -38,5 +39,5 @@
     "artplayer": "^5.2.2",
     "element-plus": "^2.9.5"
   },
-  "packageManager": "pnpm@8.14.1+sha512.856c4ecd97c5d3f30354ebc373cd32fb37274295c489db2d0f613a1e60f010cadfbb15036d525f3a06dec1897e4219b3c4f6d3be8f2f62fb0a366bee6aaa7533"
+  "packageManager": "pnpm@10.6.0"
 }
